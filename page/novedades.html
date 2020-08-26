@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../img/favicon4.png" type="/image/ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+    <title>Novedades</title>
+</head>
+<body>
+    <head>
+        <div class="logo-mobile"><img src="../img/logo2.png" alt=""></div>
+        <main style="z-index: 2;">
+            <div class="sector-logo">
+                <a href="../index.html">
+                    <h1 title="Farmacia San Jose">
+                        <img class="logo" src="../img/logo2.png" alt="">
+                    </h1>
+                </a>
+            </div>
+            <div class="menu">
+                <ul class="z-menu">
+                    <li><a href="novedades.html">Novedades</a></li>
+                    <li><a href="#">Nutri-info</a></li>
+                    <li><a href="contact.html">Contactos</a></li>
+                    <li><a href="#">Quienes somos</a></li>
+                </ul>
+            </div>
+
+            <div class="lateral-bar">
+                <dialog id="menu-mobile" >
+                    <ul class="menu-mobile">
+                        <li><a href="novedades.html">Novedades</a></li>
+                        <li><a href="#">Nutri-info</a></li>
+                        <li><a href="contact.html">Contactos</a></li>
+                        <li><a href="#">Quienes somos</a></li>
+                        <li><input type="button" value="X" onclick="document.getElementById('menu-mobile').removeAttribute('open')"></li>
+                        <li><a href="../index.html"><img class="logo" src="../img/logo2.png" alt=""></a></li>
+                    </ul>
+                </dialog>
+
+                <button value="Muestra diálogo" onclick="document.getElementById('menu-mobile').setAttribute('open', 'open')"> 
+                    <div class="menu-hamb">
+                        <div> </div>
+                        <div> </div>
+                        <div> </div>
+                    </div>
+                </button>
+                <nav class="redes">
+                    <ul>
+                        <li><a class="contact ig" href="https://www.instagram.com/explore/locations/373207166048883/salud-y-bienestar-dietetica-farmacia-san-jose"></a></li>
+                        <li><a class="contact fb" target="_blank" href="https://www.facebook.com/FarmaciaSanJoseyDietetica/"></a></li>
+                        <li><a class="contact wp" href="https://api.whatsapp.com/send?phone=+543764456814"></a></li>
+                        <li><a style="box-shadow: inset 0 0 0 5px rgb(104, 27, 27); background-color: white;" class="contact ph" href="tel:+543764456814"></a></li>
+                    </ul>
+                </nav>
+                <div class="box-hours">
+                    <div class="hours">
+                        <time id="time"></time>
+                        <span>▼</span>
+                    </div>
+                    <div class="timetable">
+                        <h4>HORARIOS</h4>
+                        <ul>
+                            <!-- en caso de que venga un feriado nacional cambiar el color
+                            de alguno de los horarios con algo significativo del feriado -->
+                            <li>Lunes 08-19hs</span></li>
+                            <li>Martes 08-19hs</li>
+                            <li>Miercoles 08-19hs</li>
+                            <li>Jueves 08-19hs</li>
+                            <li>Viernes 08-19hs</li>
+                            <li>Sabado 08-19hs</li>
+                            <span>▲</span>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </head>
+    <section class="first">
+        <h2>Novedades</h2>
+        <aside>
+            <p>Aqui encontraras, productos nuevos, promociones, reposición de articulos y cambios de horario.</p>
+        </aside>
+    </section>
+    <section>
+        <div class="carousel-content">
+            <span class="diana" id="img1"></span>
+            <div class="carousel">
+                    <img class="img-content" src="https://cdn.bioguia.com/embed/9f5445c6db018ca40bb565492e41b58161574374011/ant-balancing.jpg?imagick=1&size=1250" alt="">
+                    <a class="button-next" href="#img2">
+                        <p>></p>
+                    </a>
+                    <a class="button-prev" href="#img4">
+                        <p><</p>
+                    </a>
+                    <div class="title-img">
+                        <details class="details">
+                            <summary>
+                                <div>
+                                    <h3>Hormiga levantando gotita</h3>
+                                    <p>▼</p>
+                                </div>
+                            </summary>
+                            <p>Una hormiguita muy trabajadora levantando una gotita sin saber que le estan sacando una foto... ooo si?
+                                Una hormiguita muy trabajadora levantando una gotita sin saber que le estan sacando una foto... ooo si?
+                                Una hormiguita muy trabajadora levantando una gotita sin saber que le estan sacando una foto... ooo si?
+                                Una hormiguita muy trabajadora levantando una gotita sin saber que le estan sacando una foto... ooo si?
+                                Una hormiguita muy trabajadora levantando una gotita sin saber que le estan sacando una foto... ooo si?
+                            </p>
+                        </details>
+                    </div>
+            </div>
+            <span class="diana" id="img2"></span>
+            <div class="carousel">
+                <img class="img-content" src="https://images.ctfassets.net/hrltx12pl8hq/VZW7M82mrxByGHjvze4wu/216d9ff35b6980d850d108a50ae387bf/Carousel_01_FreeTrial.jpg?fit=fill&w=800&h=450" alt="">
+                <a class="button-next" href="#img3">
+                    <p>></p>
+                </a>
+                <a class="button-prev" href="#img1">
+                    <p><</p>
+                </a>
+                <div class="title-img">
+                    <details class="details">
+                        <summary>
+                            <div>
+                                <h3>Hormiga levantando gotita</h3>
+                                <p>▼</p>
+                            </div>
+                        </summary>
+                        <p>Una hormiguita muy trabajadora levantando una gotita sin saber que le estan sacando una foto... ooo si?
+                            Una hormiguita muy trabajadora levantando una gotita sin saber que le estan sacando una foto... ooo si?
+                            Una hormiguita muy trabajadora levantando una gotita sin saber que le estan sacando una foto... ooo si?
+                            Una hormiguita muy trabajadora levantando una gotita sin saber que le estan sacando una foto... ooo si?
+                            Una hormiguita muy trabajadora levantando una gotita sin saber que le estan sacando una foto... ooo si?
+                        </p>
+                    </details>
+                </div>
+            </div>
+            <span class="diana" id="img3"></span>
+            <div class="carousel">
+                <img class="img-content" src="../img/news/hongos.jpg" alt="">
+                <a class="button-next" href="#img4">
+                    <p>></p>
+                </a>
+                <a class="button-prev" href="#img2">
+                    <p><</p>
+                </a>
+                <div class="title-img">
+                    <details class="details">
+                        <summary>
+                            <div>
+                                <h3>Hormiga levantando gotita</h3>
+                                <p>▼</p>
+                            </div>
+                        </summary>
+                        <p>Una hormiguita muy trabajadora levantando una gotita sin saber que le estan sacando una foto... ooo si?
+                            Una hormiguita muy trabajadora levantando una gotita sin saber que le estan sacando una foto... ooo si?
+                            Una hormiguita muy trabajadora levantando una gotita sin saber que le estan sacando una foto... ooo si?
+                            Una hormiguita muy trabajadora levantando una gotita sin saber que le estan sacando una foto... ooo si?
+                            Una hormiguita muy trabajadora levantando una gotita sin saber que le estan sacando una foto... ooo si?
+                        </p>
+                    </details>
+                </div>
+            </div>
+            <span class="diana" id="img4"></span>
+            <div class="carousel">
+                <img class="img-content" src="../img/news/nory.jpg" alt="">
+                <a class="button-next" href="#img1">
+                    <p>></p>
+                </a>
+                <a class="button-prev" href="#img3">
+                    <p><</p>
+                </a>
+                <div class="title-img">
+                    <details class="details">
+                        <summary>
+                            <div>
+                                <h3>Hormiga levantando gotita</h3>
+                                <p>▼</p>
+                            </div>
+                        </summary>
+                        <p>Una hormiguita muy trabajadora levantando una gotita sin saber que le estan sacando una foto... ooo si?
+                            Una hormiguita muy trabajadora levantando una gotita sin saber que le estan sacando una foto... ooo si?
+                            Una hormiguita muy trabajadora levantando una gotita sin saber que le estan sacando una foto... ooo si?
+                            Una hormiguita muy trabajadora levantando una gotita sin saber que le estan sacando una foto... ooo si?
+                            Una hormiguita muy trabajadora levantando una gotita sin saber que le estan sacando una foto... ooo si?
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section>
+        <div>
+            <h4>PROMOCIONES</h4>
+        </div>
+    </section> -->
+    <section class="recent-article">
+        <h4>Reposición de articulos</h4>
+        <div class="content-article-box">
+            <div class="article-box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </section>
+    <section class="recent-article">
+        <h4>Productos nuevos</h4>
+        <!-- a esta seccion hay que darle mas relevancia a cada elemento
+        porque justamente son nuevo, necesitan mostrarse porque el cliente no los conoce.
+        asi que supongo que voy a poner menos elementos, con un mayor tamaño respecto de la
+        seccion anterior y alguna interaccion descriptiva de cada producto.-->
+        <div class="content-article-box">
+            <div class="article-box">
+                <div class="new-article"></div>
+                <div class="new-article"></div>
+                <div class="new-article"></div>
+                <div class="new-article"></div>
+            </div>
+        </div>
+    </section>
+    <!-- <section>
+        <div>
+            <h4>Lo mas vendido</h4>
+        </div>
+    </section> -->
+    <script>
+        // para saber a que hora cierra y abre
+        function Z(n) {
+            return (n < 10 ? '0' : '') + n;
+            }
+        function printTime() {
+            var d = new Date();
+            var hours = d.getHours();
+            var cl = 19 - hours;
+            var op = 8 - hours;
+            var op2 = 24 - hours + 8;
+            var mins = d.getMinutes();
+            if (mins === 0) {
+               var mc = 0;
+            }else {
+               var mc = 60 - mins;
+            }
+            var m = mc;
+            if (hours >= 8 && hours < 19 && mins != 0) {
+                document.getElementById("time").innerHTML =  "<p>" +"Cerramos en "+ "</p>" + Z(cl - 1)+":"+ Z(m) +" hs";
+                if (cl === 1) {
+                    document.getElementById("time").innerHTML =  "<p>" +"Cerramos en "+ "</p>" + Z(m) +" min";
+                }
+            }
+            else if (hours >= 8 && hours < 19 && mins === 0 ) {
+                    document.getElementById("time").innerHTML =  "<p>" +"Cerramos en "+ "</p>" + Z(cl) + " hs";
+                }
+            else if (hours >= 0 && hours < 8 && mins != 0) {
+                document.getElementById("time").innerHTML =  "<p>" +"Abrimos en "+ "</p>" + Z(op - 1) +":"+ Z(m) +" hs"
+                if (op === 1) {
+                    document.getElementById("time").innerHTML =  "<p>" +"Abrimos en "+ "</p>" + Z(m) +" min"
+                }
+            }
+            else if (hours >= 0 && hours < 8 && mins === 0) {
+                document.getElementById("time").innerHTML =  "<p>" +"Abrimos en "+ "</p>" + Z(op) + " hs"
+            }
+            else if (hours >= 19 && hours < 24 && mins === 0) {
+                document.getElementById("time").innerHTML =  "<p>" +"Abrimos en "+ "</p>" + Z(op2) + " hs";
+            }
+            else if (hours >= 19 && hours < 24 && mins != 0) {
+                document.getElementById("time").innerHTML = "<p>" + "Abrimos en " + "</p>" + Z(op2 - 1) +":"+ Z(m) +" hs";
+            } 
+        }
+        printTime()
+        setInterval(printTime, 30000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../img/favicon4.png" type="/image/ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+    <title>Contactenos</title>
+</head>
+<body>
+    <head>
+        <div class="logo-mobile"><img src="../img/logo2.png" alt=""></div>
+        <main style="z-index: 2;">
+            <div class="sector-logo">
+                <a href="../index.html">
+                    <h1 title="Farmacia San Jose">
+                        <img class="logo" src="../img/logo2.png" alt="">
+                    </h1>
+                </a>
+            </div>
+            <div class="menu">
+                <ul class="z-menu">
+                    <li><a href="novedades.html">Novedades</a></li>
+                    <li><a href="#">Nutri-info</a></li>
+                    <li><a href="contact.html">Contactos</a></li>
+                    <li><a href="#">Quienes somos</a></li>
+                </ul>
+            </div>
+
+            <div class="lateral-bar">
+                <dialog id="menu-mobile" >
+                    <ul class="menu-mobile">
+                        <li><a href="novedades.html">Novedades</a></li>
+                        <li><a href="#">Nutri-info</a></li>
+                        <li><a href="contact.html">Contactos</a></li>
+                        <li><a href="#">Quienes somos</a></li>
+                        <li><input type="button" value="X" onclick="document.getElementById('menu-mobile').removeAttribute('open')"></li>
+                        <li><a href="../index.html"><img class="logo" src="../img/logo2.png" alt=""></a></li>
+                    </ul>
+                </dialog>
+
+                <button value="Muestra diálogo" onclick="document.getElementById('menu-mobile').setAttribute('open', 'open')"> 
+                    <div class="menu-hamb">
+                        <div> </div>
+                        <div> </div>
+                        <div> </div>
+                    </div>
+                </button>
+                <nav class="redes">
+                    <ul>
+                        <li><a class="contact ig" href="https://www.instagram.com/explore/locations/373207166048883/salud-y-bienestar-dietetica-farmacia-san-jose"></a></li>
+                        <li><a class="contact fb" target="_blank" href="https://www.facebook.com/FarmaciaSanJoseyDietetica/"></a></li>
+                        <li><a class="contact wp" href="https://api.whatsapp.com/send?phone=+543764456814"></a></li>
+                        <li><a style="box-shadow: inset 0 0 0 5px rgb(104, 27, 27); background-color: white;" class="contact ph" href="tel:+543764456814"></a></li>
+                    </ul>
+                </nav>
+                <div class="box-hours">
+                    <div class="hours">
+                        <time id="time"></time>
+                        <span>▼</span>
+                    </div>
+                    <div class="timetable">
+                        <h4>HORARIOS</h4>
+                        <ul>
+                            <!-- en caso de que venga un feriado nacional cambiar el color
+                            de alguno de los horarios con algo significativo del feriado -->
+                            <li>Lunes 08-19hs</span></li>
+                            <li>Martes 08-19hs</li>
+                            <li>Miercoles 08-19hs</li>
+                            <li>Jueves 08-19hs</li>
+                            <li>Viernes 08-19hs</li>
+                            <li>Sabado 08-19hs</li>
+                            <span>▲</span>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </head>
+    <section style="border: 2px solid; width: 80%; margin: 0 auto;">
+        <section class="first">
+            <h2>Contactenos</h2>
+            <aside>
+                <p>Aqui encontrara formas de couminicarse con nosotros y dar con nuestra ubicacion exacta</p>
+            </aside>
+        </section>
+        <div><a class="reach-button" href="https://www.google.com.ar/maps/dir//Farmacia+San+Jos%C3%A9+%26+Diet%C3%A9tica,+Av.+Rep%C3%BAblica+Oriental+del+Uruguay+4305,+Dellepiane+%26,+N3301+Posadas/@-27.3886754,-55.9026131,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x9457be5731a00a87:0x618359f66f6996ba!2m2!1d-55.9004244!2d-27.3886754!3e0" target="_blank">COMO LLEGAR</a></div>
+    </section>
+    <script>
+        // para saber a que hora cierra y abre
+        function Z(n) {
+            return (n < 10 ? '0' : '') + n;
+            }
+        function printTime() {
+            var d = new Date();
+            var hours = d.getHours();
+            var cl = 19 - hours;
+            var op = 8 - hours;
+            var op2 = 24 - hours + 8;
+            var mins = d.getMinutes();
+            if (mins === 0) {
+               var mc = 0;
+            }else {
+               var mc = 60 - mins;
+            }
+            var m = mc;
+            if (hours >= 8 && hours < 19 && mins != 0) {
+                document.getElementById("time").innerHTML =  "<p>" +"Cerramos en "+ "</p>" + Z(cl - 1)+":"+ Z(m) +" hs";
+                if (cl === 1) {
+                    document.getElementById("time").innerHTML =  "<p>" +"Cerramos en "+ "</p>" + Z(m) +" min";
+                }
+            }
+            else if (hours >= 8 && hours < 19 && mins === 0 ) {
+                    document.getElementById("time").innerHTML =  "<p>" +"Cerramos en "+ "</p>" + Z(cl) + " hs";
+                }
+            else if (hours >= 0 && hours < 8 && mins != 0) {
+                document.getElementById("time").innerHTML =  "<p>" +"Abrimos en "+ "</p>" + Z(op - 1) +":"+ Z(m) +" hs"
+                if (op === 1) {
+                    document.getElementById("time").innerHTML =  "<p>" +"Abrimos en "+ "</p>" + Z(m) +" min"
+                }
+            }
+            else if (hours >= 0 && hours < 8 && mins === 0) {
+                document.getElementById("time").innerHTML =  "<p>" +"Abrimos en "+ "</p>" + Z(op) + " hs"
+            }
+            else if (hours >= 19 && hours < 24 && mins === 0) {
+                document.getElementById("time").innerHTML =  "<p>" +"Abrimos en "+ "</p>" + Z(op2) + " hs";
+            }
+            else if (hours >= 19 && hours < 24 && mins != 0) {
+                document.getElementById("time").innerHTML = "<p>" + "Abrimos en " + "</p>" + Z(op2 - 1) +":"+ Z(m) +" hs";
+            } 
+        }
+        printTime()
+        setInterval(printTime, 30000);
+    </script>
+</body>
+</html>
