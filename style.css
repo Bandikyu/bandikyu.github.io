@@ -375,7 +375,13 @@ h2 {
 /* FIN REPO ARTICULOS */
 
 /* INICIO SECCION CONTACTOS */
+.content-reach-button {
+    display: block;
+    width: 200px;
+    margin: 10px auto;
+}
 .reach-button {
+    margin: 0 auto;
     width: 195px;
     height: 50px;
     display: flex;
@@ -387,6 +393,15 @@ h2 {
     color: whitesmoke;
     box-shadow: inset -2px -2px 4px -2px;
     border-radius: 5px;
+
+}
+.map {
+    width: 45vw;
+    height: 35vw;
+    box-shadow: 2px 2px 5px -1px;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: block;
 }
 
 
