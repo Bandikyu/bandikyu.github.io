@@ -375,35 +375,70 @@ h2 {
 /* FIN REPO ARTICULOS */
 
 /* INICIO SECCION CONTACTOS */
-.content-reach-button {
-    display: block;
-    width: 200px;
-    margin: 10px auto;
-}
-.reach-button {
-    margin: 0 auto;
-    width: 195px;
-    height: 50px;
+.direction {
+    /* border:2px solid;  */
+    position: relative; 
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    background-color: hsl(220, 50%, 50%);
-    color: whitesmoke;
-    box-shadow: inset -2px -2px 4px -2px;
-    border-radius: 5px;
-
-}
-.map {
-    width: 45vw;
-    height: 35vw;
-    box-shadow: 2px 2px 5px -1px;
-    border-radius: 10px;
-    margin: 0 auto;
-    display: block;
 }
 
+    .lamella {
+        display: flex;
+        align-items: center;
+        width: 80%;
+        height: 80%;
+        background-color: var(--main-bg-color);
+        position: absolute;
+        z-index: 0;
+    }
+        .right-content {
+            width: 40%;
+            /* border: 2px solid; */
+            position: absolute;
+            right: 0;
+        }
+            .right-content p {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+            .content-reach-button {
+                position: relative;
+                right: 1px;
+                /* display: block; */
+                width: 200px;
+                margin: 10px auto;
+            }
+                .reach-button {
+                    margin: 0 auto;
+                    width: 195px;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    background-color: hsl(220, 50%, 50%);
+                    color: whitesmoke;
+                    box-shadow: inset -2px -2px 4px -2px;
+                    border-radius: 5px;
+                    transition: 0.5s;
+                
+                }
+    .map {
+        width: 45vw;
+        height: 35vw;
+        box-shadow: 2px 2px 5px -1px;
+        border-radius: 10px;
+        /* display: block; */
+        position: relative;
+        right: 15%;
+    }
+    .direction:hover .reach-button {
+        background-color: hsl(220, 50%, 55%);
+        box-shadow: none;
+        transition: 0.5s;
+    }
 
 /* --------------------------------------Mobile-------------------------------------- */
 
