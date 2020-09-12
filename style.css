@@ -27,7 +27,7 @@ div[style*="text"] {
 h1, h2 {
     font-family: 'Open Sans', sans-serif;
 }
-p, li, h3, time, h4, legend, a {
+p, li, h3, time, h4, legend, a, div {
     font-family: 'Roboto', sans-serif;
     /* font-size: 1.3rem; */
 }
@@ -57,7 +57,7 @@ main {
     top: 0;
     box-shadow: purple 1px -28px 50px -11px;
     background-color: var(--main-bg-color);
-    margin-bottom: 0.5em;
+    margin-bottom: 30px;
 }
 
 .sector-logo {
@@ -153,7 +153,7 @@ h2 {
 .first {
     /* margin: 0 3em; */
     text-align: center;
-    margin: 0 auto;
+    margin: 0 auto 35px;
     width: 60vw;
 }
 .first p {
@@ -376,18 +376,18 @@ h2 {
 
 /* INICIO SECCION CONTACTOS */
 .direction {
-    /* border:2px solid;  */
     position: relative; 
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 30px;
 }
 
     .lamella {
         display: flex;
         align-items: center;
         width: 80%;
-        height: 80%;
+        height: 85%;
         background-color: var(--main-bg-color);
         position: absolute;
         z-index: 0;
@@ -420,12 +420,12 @@ h2 {
                     font-weight: bold;
                     background-color: hsl(220, 50%, 50%);
                     color: whitesmoke;
-                    box-shadow: inset -2px -2px 4px -2px;
                     border-radius: 5px;
                     transition: 0.5s;
                 
                 }
     .map {
+        background-color: whitesmoke;
         width: 45vw;
         height: 35vw;
         box-shadow: 2px 2px 5px -1px;
@@ -434,10 +434,36 @@ h2 {
         position: relative;
         right: 15%;
     }
-    .direction:hover .reach-button {
+    .lamella:hover .reach-button {
         background-color: hsl(220, 50%, 55%);
-        box-shadow: none;
         transition: 0.5s;
+    }
+
+.contacts-frame {
+    /* border: 2px solid; */
+    position: relative; 
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+    .square-contact {
+        --dimension-square-contact: 250px;
+        margin: 10px;
+        width: calc(var(--dimension-square-contact) / 1.2);
+        height: var(--dimension-square-contact);
+        background-color: transparent;
+        transition: 0.2s;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    :hover.square-contact {
+        box-shadow: 0 3px 12px -8px;
+        position: relative;
+        bottom: 2px;
+        transition: 0.2s;
     }
 
 /* --------------------------------------Mobile-------------------------------------- */
