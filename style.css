@@ -153,7 +153,7 @@ h2 {
 .first {
     /* margin: 0 3em; */
     text-align: center;
-    margin: 0 auto 35px;
+    margin: 0 auto 30px;
     width: 60vw;
 }
 .first p {
@@ -382,7 +382,6 @@ h2 {
     justify-content: center;
     margin-bottom: 30px;
 }
-
     .lamella {
         display: flex;
         align-items: center;
@@ -440,6 +439,7 @@ h2 {
     }
 
 .contacts-frame {
+    margin-bottom: 40px;
     /* border: 2px solid; */
     position: relative; 
     flex-wrap: wrap;
@@ -449,22 +449,58 @@ h2 {
 
 }
     .square-contact {
-        --dimension-square-contact: 250px;
+        /* display: flex;
+        flex-direction: column;
+        align-items: center; */
+        --dimension-square-contact: 200px;
         margin: 10px;
-        width: calc(var(--dimension-square-contact) / 1.2);
+        width: calc(var(--dimension-square-contact) / 1);
         height: var(--dimension-square-contact);
-        background-color: transparent;
+        background-color: var(--main-bg-color);
         transition: 0.2s;
         border-radius: 5px;
-        text-align: center;
         font-size: 1.2rem;
     }
-    :hover.square-contact {
-        box-shadow: 0 3px 12px -8px;
-        position: relative;
-        bottom: 2px;
-        transition: 0.2s;
-    }
+        .square-contact:nth-child(4)>p {
+            font-size: 0;
+        }
+            :hover.square-contact:nth-child(4)>p {
+                border-top: 1px solid rgb(128, 0, 64);
+                text-align: center;
+                height: 15%;
+                font-size: 1.02rem;
+                transition: 0.2s;
+                padding-top: 6px;
+            }
+        .square-contact img {
+            width: 100px;
+            margin-bottom: 15px;
+        }
+        .square-contact a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            transition: 0.2s;
+        }
+            :hover.square-contact {
+                box-shadow: 0 3px 12px -8px;
+                position: relative;
+                bottom: 2px;
+                transition: 0.2s;
+            }
+                :hover.square-contact:nth-child(4)>a {
+                    margin-bottom: -7px;
+                    height: 85%;
+                    transition: 0.2s;
+                }
+            :active.square-contact {
+                box-shadow: none;
+                position: static;
+                transition: 0.2s;
+            }
 
 /* --------------------------------------Mobile-------------------------------------- */
 
@@ -472,7 +508,7 @@ h2 {
     
     body {
     --menu-hamb-size: 6vh;
-    height: 300vh;
+    /* height: 300vh; */
 }
 .timeline-facebook {
     display: none;
@@ -798,6 +834,71 @@ h2 {
             overflow: hidden;
         }
 /* MOBILE REPO ARTICULOS FIN */
+
+/* MOBILE DIRECTION INICIO */
+.direction {
+    position: relative; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+.lamella {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    background-color: var(--main-bg-color);
+    position: relative;
+    z-index: 0;
+    margin-bottom: 30px;
+}
+    .right-content {
+        border-top: 2px solid rgb(128, 0, 64);
+        padding-top: 4px;
+        width: 80%;
+        position: absolute;
+        right: 10%;
+        bottom: 0;
+    }
+        .right-content p {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+.map {
+    width: 80vw;
+    height: 60%;
+    position: absolute;
+    right: 10%;
+    top: 2%;
+}
+.contacts-frame {
+    margin-bottom: 20px;
+    /* border: 2px solid; */
+    position: relative; 
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.square-contact {
+    --dimension-square-contact: 150px;
+}
+.square-contact:nth-child(4)>p {
+    display: none;
+}
+:hover.square-contact:nth-child(4)>a {
+    margin-bottom: 0;
+    height: 100%;
+    transition: 0.2s;
+}
+:hover.square-contact {
+    box-shadow: none;
+    position: relative;
+    bottom: 0;
+    transition: 0.2s;
+}
 
 
 
