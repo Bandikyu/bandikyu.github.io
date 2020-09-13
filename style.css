@@ -27,7 +27,7 @@ div[style*="text"] {
 h1, h2 {
     font-family: 'Open Sans', sans-serif;
 }
-p, li, h3, time, h4, legend, a {
+p, li, h3, time, h4, legend, a, div {
     font-family: 'Roboto', sans-serif;
     /* font-size: 1.3rem; */
 }
@@ -57,7 +57,7 @@ main {
     top: 0;
     box-shadow: purple 1px -28px 50px -11px;
     background-color: var(--main-bg-color);
-    margin-bottom: 0.5em;
+    margin-bottom: 30px;
 }
 
 .sector-logo {
@@ -153,7 +153,7 @@ h2 {
 .first {
     /* margin: 0 3em; */
     text-align: center;
-    margin: 0 auto;
+    margin: 0 auto 30px;
     width: 60vw;
 }
 .first p {
@@ -375,35 +375,132 @@ h2 {
 /* FIN REPO ARTICULOS */
 
 /* INICIO SECCION CONTACTOS */
-.content-reach-button {
-    display: block;
-    width: 200px;
-    margin: 10px auto;
-}
-.reach-button {
-    margin: 0 auto;
-    width: 195px;
-    height: 50px;
+.direction {
+    position: relative; 
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    background-color: hsl(220, 50%, 50%);
-    color: whitesmoke;
-    box-shadow: inset -2px -2px 4px -2px;
-    border-radius: 5px;
+    margin-bottom: 30px;
+}
+    .lamella {
+        display: flex;
+        align-items: center;
+        width: 80%;
+        height: 85%;
+        background-color: var(--main-bg-color);
+        position: absolute;
+        z-index: 0;
+    }
+        .right-content {
+            width: 40%;
+            /* border: 2px solid; */
+            position: absolute;
+            right: 0;
+        }
+            .right-content p {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+            .content-reach-button {
+                position: relative;
+                right: 1px;
+                /* display: block; */
+                width: 200px;
+                margin: 10px auto;
+            }
+                .reach-button {
+                    margin: 0 auto;
+                    width: 195px;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    background-color: hsl(220, 50%, 50%);
+                    color: whitesmoke;
+                    border-radius: 5px;
+                    transition: 0.5s;
+                
+                }
+    .map {
+        background-color: whitesmoke;
+        width: 45vw;
+        height: 35vw;
+        box-shadow: 2px 2px 5px -1px;
+        border-radius: 10px;
+        /* display: block; */
+        position: relative;
+        right: 15%;
+    }
+    .lamella:hover .reach-button {
+        background-color: hsl(220, 50%, 55%);
+        transition: 0.5s;
+    }
+
+.contacts-frame {
+    margin-bottom: 40px;
+    /* border: 2px solid; */
+    position: relative; 
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
-.map {
-    width: 45vw;
-    height: 35vw;
-    box-shadow: 2px 2px 5px -1px;
-    border-radius: 10px;
-    margin: 0 auto;
-    display: block;
-}
-
+    .square-contact {
+        /* display: flex;
+        flex-direction: column;
+        align-items: center; */
+        --dimension-square-contact: 200px;
+        margin: 10px;
+        width: calc(var(--dimension-square-contact) / 1);
+        height: var(--dimension-square-contact);
+        background-color: var(--main-bg-color);
+        transition: 0.2s;
+        border-radius: 5px;
+        font-size: 1.2rem;
+    }
+        .square-contact:nth-child(4)>p {
+            font-size: 0;
+        }
+            :hover.square-contact:nth-child(4)>p {
+                border-top: 1px solid rgb(128, 0, 64);
+                text-align: center;
+                height: 15%;
+                font-size: 1.02rem;
+                transition: 0.2s;
+                padding-top: 6px;
+            }
+        .square-contact img {
+            width: 100px;
+            margin-bottom: 15px;
+        }
+        .square-contact a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            transition: 0.2s;
+        }
+            :hover.square-contact {
+                box-shadow: 0 3px 12px -8px;
+                position: relative;
+                bottom: 2px;
+                transition: 0.2s;
+            }
+                :hover.square-contact:nth-child(4)>a {
+                    margin-bottom: -7px;
+                    height: 85%;
+                    transition: 0.2s;
+                }
+            :active.square-contact {
+                box-shadow: none;
+                position: static;
+                transition: 0.2s;
+            }
 
 /* --------------------------------------Mobile-------------------------------------- */
 
@@ -411,7 +508,7 @@ h2 {
     
     body {
     --menu-hamb-size: 6vh;
-    height: 300vh;
+    /* height: 300vh; */
 }
 .timeline-facebook {
     display: none;
@@ -737,6 +834,71 @@ h2 {
             overflow: hidden;
         }
 /* MOBILE REPO ARTICULOS FIN */
+
+/* MOBILE DIRECTION INICIO */
+.direction {
+    position: relative; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+.lamella {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    background-color: var(--main-bg-color);
+    position: relative;
+    z-index: 0;
+    margin-bottom: 30px;
+}
+    .right-content {
+        border-top: 2px solid rgb(128, 0, 64);
+        padding-top: 4px;
+        width: 80%;
+        position: absolute;
+        right: 10%;
+        bottom: 0;
+    }
+        .right-content p {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+.map {
+    width: 80vw;
+    height: 60%;
+    position: absolute;
+    right: 10%;
+    top: 2%;
+}
+.contacts-frame {
+    margin-bottom: 20px;
+    /* border: 2px solid; */
+    position: relative; 
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.square-contact {
+    --dimension-square-contact: 150px;
+}
+.square-contact:nth-child(4)>p {
+    display: none;
+}
+:hover.square-contact:nth-child(4)>a {
+    margin-bottom: 0;
+    height: 100%;
+    transition: 0.2s;
+}
+:hover.square-contact {
+    box-shadow: none;
+    position: relative;
+    bottom: 0;
+    transition: 0.2s;
+}
 
 
 
