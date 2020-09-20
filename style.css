@@ -28,9 +28,9 @@ body, ul, h1 {
 }
 
 body {
-    --main-bg-color:hsl(106, 50%, 78%);
-    --second-bg-color:hsl(106, 50%, 65%);
     background-color: hsl(0, 0%, 90%);
+    --main-bg-color:hsl(106, 50%, 78%);
+    --second-bg-color:hsl(106, 50%, 70%);
     --main-letter-color:hsl(36, 21%, 14%);
     --border-radius-general: 0.2em;
 }
@@ -112,13 +112,12 @@ li {
 
 .share {
     position: fixed;
-    top: 250px;
+    top: 200px;
     right: 10px;
     z-index: 1;
     background-color: transparent;
     padding: 3px;
     border-radius: 5px;
-    /* border: 3px solid; */
 }
 
 .contact {
@@ -374,30 +373,59 @@ h2 {
         padding-inline-start: 5px;
     }
     .content-article-box {
-        padding-top: 10px;
-        height: 430px;
+        padding: 10px;
         width: 100%;
         border: 2px solid hsl(0, 50%, 46%);
     
     }
-    
+
     .article-box {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        align-content: center;
+        align-items: center;
         flex-direction: row;
         width: 100%;
+        --size-rerun-img: 200px
     }
     .article-box>div {
-        margin: 2.5px;
-        height: 200px;
-        width: 200px;
-        background-color: cadetblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: var(--size-rerun-img);
+        width: var(--size-rerun-img);
+        margin: 5px;
+        overflow: hidden;
+    }
+    .article-box>div>img {
+        height: var(--size-rerun-img);
+        width: var(--size-rerun-img);
+        object-fit: cover;
+        border-radius: 5%;
+
+    }
+    .article-box div:hover {
+        overflow: visible;
+    }
+    .article-box img:hover {
+        animation: imgzoom;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes imgzoom {
+        100% {
+            height: auto;
+            width: calc(var(--size-rerun-img) * 1.7) ;
+            position: absolute;
+            object-fit: contain;
+            z-index: 2;
+        }
     }
 
 .article-box>.new-article {
     width: 24%;
+    border: 2px solid;
     height: 400px;
 }
 /* FIN REPO ARTICULOS */
@@ -532,24 +560,52 @@ h2 {
 
 /* INICIO HOME */
 .start {
-    border: 2px solid;
-    width: 80%;
+    background-color: var(--second-bg-color);
+    width: 65%;
+    /* height: 200px; */
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    border-radius: 5px;
+    padding: 20px 10px;
 }
 .start>div {
-    text-align: center;
-    width: 20%;
-    height: 100px;
     border: 2px solid;
+    width: 200px;
+    height: 150px;
     margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-bg-color);
+}
+.start a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .start h3 {
     font-size: 1.5rem;
+}
+.start ul {
+    height: 0;
+    padding: 0 10px;
+    overflow: hidden;
+}
+.start-content ul {
+    transition: .2s;
+}
+:hover.start-content ul {
+    transition: .2s;
+    height: 85px;
+}
+
+.carousel-generic {
+    border: 2px solid;
 }
 
 /* --------------------------------------Mobile-------------------------------------- */
@@ -727,8 +783,6 @@ main {
         position: relative;
         top: 0;
         left: 0;
-        margin-right: 2px;
-
     }
     .share>ul {
         display: flex;
@@ -737,21 +791,12 @@ main {
         justify-content: center;
     }
         .contact {
-            position: relative;
-            background-size: contain;
-            background-color: white;
-            background-repeat: no-repeat;
-            display: block;
-            border-radius: 5px;
-            --icon-contact: 6vh;
-            width: var(--icon-contact);
-            height: var(--icon-contact);
             margin: 0 1px;
         }
         :hover.contact {
             transition: 0;
             position: relative;
-            --icon-contact: 6vh;
+            --icon-contact: 35px;
             
         }
 .carousel-content {
