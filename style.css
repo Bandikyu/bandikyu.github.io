@@ -34,15 +34,6 @@ body {
     --main-letter-color:hsl(36, 21%, 14%);
     --border-radius-general: 0.2em;
 }
-.timeline-facebook {
-    width: 340px;
-    height: 500px;
-    background-color: gainsboro;
-    float: right;
-    margin-right: 8%;
-    box-shadow: 0 0px 5px -1px;
-    border-radius: 10px;
-}
 
 .logo-mobile {
     display: none;
@@ -102,11 +93,11 @@ li {
     display: block;
 }
 
-.menu>li:hover{
+.menu li:hover{
     box-shadow: purple 0 0 10px -7px;
 }
 
-.menu>li:active {
+.menu li:active {
     box-shadow: inset  0 0 10px -7px purple;
 }
 
@@ -410,8 +401,9 @@ h2 {
     }
     .article-box img:hover {
         animation: imgzoom;
-        animation-duration: 0.3s;
+        animation-duration: 0.4s;
         animation-fill-mode: forwards;
+        animation-timing-function: ease-out;
     }
     @keyframes imgzoom {
         100% {
@@ -563,7 +555,7 @@ h2 {
     background-color: var(--second-bg-color);
     width: 65%;
     /* height: 200px; */
-    margin: 0 auto;
+    margin: 0 auto 50px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -604,9 +596,75 @@ h2 {
     height: 85px;
 }
 
-.carousel-generic {
-    border: 2px solid;
+
+.generic {
+    display: flex;
+    flex-direction: row;
+    --ancho-generic: 65vw;
+    width: var(--ancho-generic);
+    --altura-generic: calc(var(--ancho-generic) / 1.5);
+    height: var(--altura-generic);
+    margin: 0 auto;
+    position: relative;
 }
+.generic>div {
+    position: absolute;
+    --medida-caja-gris: 4.5rem;
+    font-size: 1rem;
+    --medida-caja-gris-alto: calc(var(--medida-caja-gris)*1.5);
+    width: var(--medida-caja-gris);
+    height: var(--medida-caja-gris-alto);
+    background-color: var(--main-bg-color);
+    z-index: 1;
+    margin-left: calc(50% - var(--medida-caja-gris)/2);
+    margin-top: calc(var(--altura-generic)/2 - var(--medida-caja-gris-alto)/2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.generic>div>p {
+    height: 1.4rem;
+}
+.generic-first-division {
+    height: 100%;
+    width: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: var(--main-bg-color);
+}
+.generic-content-redes {
+    width: 100%;
+    height: 80%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.bleft {
+    border-left: 1px solid;
+}
+.bright {
+    border-right: 1px solid;
+}
+.timeline-facebook {
+    width: 340px;
+    height: 500px;
+    background-color: gainsboro;
+    background-image: url(img/fb.png);
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-position-x: 50%;
+    background-position-y: 60px;
+}
+.generic-first-division:nth-child(3):hover .timeline-facebook {
+    box-shadow: 0 0px 0 3px;
+    position: relative;
+    transition: .8s;
+}
+
+
 
 /* --------------------------------------Mobile-------------------------------------- */
 
