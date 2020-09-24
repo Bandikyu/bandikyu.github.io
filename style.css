@@ -384,35 +384,32 @@ h2 {
         justify-content: center;
         align-items: center;
         position: relative;
-        height: var(--size-rerun-img);
+        /* height: var(--size-rerun-img); */
+        height: auto;
         width: var(--size-rerun-img);
         margin: 5px;
         overflow: hidden;
     }
     .article-box>div>img {
-        height: var(--size-rerun-img);
+        /* height: var(--size-rerun-img); */
+        height: auto;
         width: var(--size-rerun-img);
-        object-fit: cover;
-        border-radius: 5%;
+        object-fit: contain;
+        /* border-radius: 5%; */
+        /* border: 2px solid blue; */
 
     }
     .article-box div:hover {
         overflow: visible;
     }
-    .article-box img:hover {
-        animation: imgzoom;
-        animation-duration: 0.4s;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-out;
-    }
-    @keyframes imgzoom {
-        100% {
-            height: auto;
-            width: calc(var(--size-rerun-img) * 1.7) ;
-            position: absolute;
-            object-fit: contain;
-            z-index: 2;
-        }
+    .article-box>div:hover img {
+        height: auto;
+        width: calc(var(--size-rerun-img) * 1.7) ;
+        position: absolute;
+        /* object-fit: contain; */
+        z-index: 2;
+        transition: .3s;
+        border:5px solid black;
     }
 
 .article-box>.new-article {
@@ -973,14 +970,12 @@ h2 {
     }
     .content-article-box {
         padding-top: 10px;
-        height: 230px;
+        height: 200px;
         overflow-y: hidden;
         overflow-x: auto;
         border: none;
         border-top: 2px solid hsl(0, 50%, 46%);
         border-bottom: 2px solid hsl(0, 50%, 46%);
-    
-    
     }
         .article-box {
             display: flex;
@@ -991,6 +986,16 @@ h2 {
             width: 1850px;
             overflow: hidden;
         }
+    .article-box>div:hover img {
+        height: auto;
+        width: var(--size-rerun-img);
+        position: absolute;
+        /* object-fit: contain; */
+        z-index: 0;
+        transition: 0;
+        border: none;
+
+    }
 /* MOBILE REPO ARTICULOS FIN */
 
 /* MOBILE DIRECTION INICIO */
