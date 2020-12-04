@@ -161,12 +161,12 @@
                                 <p>▼</p>
                             </div>
                         </summary>
-                        <p>Una hormiguita muy trabajadora levantando una gotita sin saber que le estan sacando una foto... ooo si?
+                        <!-- <p>Una hormiguita muy trabajadora levantando una gotita sin saber que le estan sacando una foto... ooo si?
                             Una hormiguita muy trabajadora levantando una gotita sin saber que le estan sacando una foto... ooo si?
                             Una hormiguita muy trabajadora levantando una gotita sin saber que le estan sacando una foto... ooo si?
                             Una hormiguita muy trabajadora levantando una gotita sin saber que le estan sacando una foto... ooo si?
                             Una hormiguita muy trabajadora levantando una gotita sin saber que le estan sacando una foto... ooo si?
-                        </p>
+                        </p> -->
                     </details>
                 </div>
             </div>
@@ -206,18 +206,25 @@
     <section class="recent-article">
         <h4>Reposición de articulos</h4>
         <div class="content-article-box">
-            <div class="article-box">
-                <div><img src="../img/news/reruns/product_ver (1).jpg" alt=""></div>
-                <div><img src="../img/news/reruns/product_ver (2).jpg" alt=""></div>
-                <div><img src="../img/news/reruns/product_ver (3).jpg" alt=""></div>
-                <div><img src="../img/news/reruns/product_ver (4).jpg" alt=""></div>
-                <div><img src="../img/news/reruns/product_ver (5).jpg" alt=""></div>
-                <div><img src="../img/news/reruns/product_ver (6).jpg" alt=""></div>
-                <div><img src="../img/news/reruns/product_ver (7).jpg" alt=""></div>
-                <div><img src="../img/news/reruns/product_ver (8).jpg" alt=""></div>
-                <div><img src="../img/news/reruns/product_ver (9).jpg" alt=""></div>
+            <div class="article-box" id="gallery-list">
+                <div class="A2" id="1"><img src="../img/news/reruns/product_ver (1).jpg" alt=""></div>
+                <div class="A2" id="2"><img src="../img/news/reruns/product_ver (2).jpg" alt=""></div>
+                <div class="A2" id="3"><img src="../img/news/reruns/product_ver (3).jpg" alt=""></div>
+                <div class="A2" id="4"><img src="../img/news/reruns/product_ver (4).jpg" alt=""></div>
+                <div class="A2" id="5"><img src="../img/news/reruns/product_ver (5).jpg" alt=""></div>
+                <div class="A2" id="6"><img src="../img/news/reruns/product_ver (6).jpg" alt=""></div>
+                <div class="A2" id="7"><img src="../img/news/reruns/product_ver (7).jpg" alt=""></div>
+                <div class="A2" id="8"><img src="../img/news/reruns/product_ver (8).jpg" alt=""></div>
+                <div class="A2" id="9"><img src="../img/news/reruns/product_ver (9).jpg" alt=""></div>
             </div>
         </div>
+        <dialog id="gallery">
+            <button id="prev" class="gallery-prev"><</button>
+            <button id="next" class="gallery-next">></button>
+            <div id="hola"> </div>
+            <button id="close" class="close">X</button>
+        </dialog>
+        <script src="../scripts/gallery.js"></script>
     </section>
     <section class="recent-article">
         <h4>Productos nuevos</h4>

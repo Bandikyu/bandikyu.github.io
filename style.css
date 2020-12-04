@@ -348,26 +348,38 @@ h2 {
 
 /* INICIO REPO ARTICULOS */
 .recent-article {
-    width: 85vw;
+    /* border: 2px solid; */
+    background-color: var(--second-bg-color);
+    width: 88vw;
     margin: 40px auto 0;
     position: relative;
+    /* left: 0; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
 }
     .recent-article>h4 {
+        border-radius: 20px;
+        background-color: var(--main-bg-color);
         position: relative;
         display: inline-block;
         top: 10px;
-        background-color: hsl(0, 0%, 90%);
+        /* background-color: hsl(0, 0%, 90%); */
         font-weight: normal;
         margin-left: 20px;
         font-size: 1.5rem ;
         padding-inline-end: 5px;
         padding-inline-start: 5px;
+        box-shadow: 0px -10px 10px -14px;
     }
     .content-article-box {
+        background-color: var(--main-bg-color);
         padding: 10px;
-        width: 100%;
-        border: 2px solid hsl(0, 50%, 46%);
-    
+        width: 60vw;
+        box-shadow: 0 5px 20px -8px;
+        border-radius: 20px;
     }
 
     .article-box {
@@ -379,7 +391,7 @@ h2 {
         width: 100%;
         --size-rerun-img: 200px
     }
-    .article-box>div {
+    .article-box div {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -390,26 +402,27 @@ h2 {
         margin: 5px;
         overflow: hidden;
     }
-    .article-box>div>img {
+    .article-box div>img {
         /* height: var(--size-rerun-img); */
         height: auto;
         width: var(--size-rerun-img);
         object-fit: contain;
-        /* border-radius: 5%; */
+        border-radius: 5%;
         /* border: 2px solid blue; */
 
     }
     .article-box div:hover {
         overflow: visible;
     }
-    .article-box>div:hover img {
+    .article-box div:hover img {
+        cursor: pointer;
         height: auto;
-        width: calc(var(--size-rerun-img) * 1.7) ;
+        width: calc(var(--size-rerun-img) * 1.3) ;
         position: absolute;
         /* object-fit: contain; */
         z-index: 2;
         transition: .3s;
-        border:5px solid black;
+        /* border:5px solid black; */
     }
 
 .article-box>.new-article {
@@ -417,6 +430,104 @@ h2 {
     border: 2px solid;
     height: 400px;
 }
+/* ------------------------- */
+
+#hola {
+    font-size: 5rem;
+    color: white;
+    /* width: 40px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* #hola img {
+    animation-name: lola;
+    animation-duration: .1s;
+    animation-play-state: running;
+} */
+:active.gallery-next~#hola img {
+    animation-name: lola;
+    animation-duration: .1s;
+    animation-play-state: running;
+}
+:active.gallery-prev~#hola img {
+    animation: loli;
+    animation-duration: .1s;
+    animation-play-state: running;
+}
+@keyframes loli {
+    0% {
+        margin-right: 100%;
+    }
+    100% {
+        margin-right: none;
+    }
+}
+@keyframes lola {
+    0% {
+        margin-left: 100%;
+    }
+    100% {
+        margin-left: none;
+    }
+}
+
+.recent-article [open] {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: hsla(0, 0%, 0%,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    border: transparent;
+
+}
+[open]>div {
+    width: 50vw;
+    position: absolute;
+
+}
+[open] img {
+    object-fit: contain;
+    width: 50vw;
+}
+
+.gallery-prev , .gallery-next {
+    width: 70px;
+    height: 70px;
+    margin: 20px;
+    font-size: 4rem;
+    transform: scaleY(1.8);
+    font-family: monospace;
+    border: none;
+    color: cornsilk;
+    border-radius: 10%;
+    background-color: hsla(0, 0%, 0%, 0.7);
+}
+.gallery-prev {
+    position: absolute;
+    left: 10%;
+}
+.gallery-next {
+    position: absolute;
+    right: 10%;
+}
+.close {
+    width: 5vw;
+    height: 5vw;
+    font-size: 2rem;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border-radius: 50%;
+    border: none;
+    color: cornsilk;
+    background-color: hsla(0, 0%, 0%, 0.7);
+}
+
 /* FIN REPO ARTICULOS */
 
 /* INICIO SECCION CONTACTOS */
@@ -541,11 +652,11 @@ h2 {
                     height: 85%;
                     transition: 0.2s;
                 }
-            :active.square-contact {
+/*             :active.square-contact {
                 box-shadow: none;
                 position: static;
                 transition: 0.2s;
-            }
+            } */
 
 /* INICIO HOME */
 .start {
@@ -606,9 +717,9 @@ h2 {
 }
 .generic>div {
     position: absolute;
-    --medida-caja-gris: 4.5rem;
+    --medida-caja-gris: .5rem;
     font-size: 1rem;
-    --medida-caja-gris-alto: calc(var(--medida-caja-gris)*1.5);
+    --medida-caja-gris-alto: calc(var(--medida-caja-gris)*14);
     width: var(--medida-caja-gris);
     height: var(--medida-caja-gris-alto);
     background-color: var(--main-bg-color);
@@ -619,7 +730,6 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
 }
 .generic>div>p {
     height: 1.4rem;
@@ -656,7 +766,6 @@ h2 {
     background-position-y: 60px;
 }
 .generic-first-division:nth-child(3):hover .timeline-facebook {
-    box-shadow: 0 0px 0 3px;
     position: relative;
     transition: .8s;
 }
@@ -859,8 +968,6 @@ main {
     width: 95vw;
     height: 60vw;
     position: relative;
-    /* box-shadow: 0 5px 15px 0; */
-    /* border-radius: 10px; */
 }
     .title-img {
         position: absolute;
@@ -869,20 +976,13 @@ main {
         color: hsl(0, 50%, 100%);
         opacity: 0.8;
         width: 100%;
-        /* max-height: 6vw; */
         text-align: center;
         padding: 2% 8%;
         font-size: 1rem;
         text-decoration: none;
-        /* border-top-left-radius: 30px;
-        border-top-right-radius: 30px; */
         max-height: 70%;
         overflow: auto;
     }
-    /* .title-img::-webkit-scrollbar {
-        width: 20px;
-        height: 20px;
-    } */
         .details:first-child {
             font-size: 1rem;
         }
@@ -892,7 +992,6 @@ main {
         }
             .details>summary>div {
                 color: white;
-                /* border: 2px solid red; */
             }
                 .details>summary>div>h3 {
                     font-size: 1.2rem;
@@ -908,7 +1007,6 @@ h2 {
 }
 
 .first {
-    /* margin: 0 3em; */
     text-align: center;
     margin: 0 auto;
     width: 70vw;
@@ -986,7 +1084,7 @@ h2 {
             width: 1850px;
             overflow: hidden;
         }
-    .article-box>div:hover img {
+    .article-box div:hover img {
         height: auto;
         width: var(--size-rerun-img);
         position: absolute;
