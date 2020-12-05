@@ -11,6 +11,9 @@
     --border-main-farma:hsl(340, 50%, 50%)
 }
 
+:focus {
+    outline: none;
+}
 
 
 h1, h2 {
@@ -348,31 +351,28 @@ h2 {
 
 /* INICIO REPO ARTICULOS */
 .recent-article {
-    /* border: 2px solid; */
+    border-left: 5px solid var(--border-main-farma);
+    border-bottom: 5px solid var(--border-main-farma);
     background-color: var(--second-bg-color);
     width: 88vw;
     margin: 40px auto 0;
     position: relative;
-    /* left: 0; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-radius: 20px;
+    /* border-radius: 20px; */
 }
     .recent-article>h4 {
-        border-radius: 20px;
-        background-color: var(--main-bg-color);
-        position: relative;
+        background-color: var(--second-bg-color);
         display: inline-block;
-        top: 10px;
-        /* background-color: hsl(0, 0%, 90%); */
+        --margin-title-viñeta: 10px;
+        margin-top: var(--margin-title-viñeta);
+        margin-bottom: var(--margin-title-viñeta);
         font-weight: normal;
-        margin-left: 20px;
-        font-size: 1.5rem ;
+        font-size: 1.55rem ;
         padding-inline-end: 5px;
         padding-inline-start: 5px;
-        box-shadow: 0px -10px 10px -14px;
     }
     .content-article-box {
         background-color: var(--main-bg-color);
@@ -380,6 +380,7 @@ h2 {
         width: 60vw;
         box-shadow: 0 5px 20px -8px;
         border-radius: 20px;
+        margin-bottom: 20px;
     }
 
     .article-box {
@@ -768,6 +769,17 @@ h2 {
 .generic-first-division:nth-child(3):hover .timeline-facebook {
     position: relative;
     transition: .8s;
+}
+
+.timeline-instagram {
+    width: 340px;
+    height: 500px;
+    background-color: gainsboro;
+    background-image: url(img/instagram.svg);
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-position-x: 50%;
+    background-position-y: 60px;
 }
 
 
