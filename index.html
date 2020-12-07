@@ -67,20 +67,7 @@
                         <time id="time"></time>
                         <span>▼</span>
                     </div>
-                    <div class="timetable">
-                        <h4>HORARIOS</h4>
-                        <ul>
-                            <!-- en caso de que venga un feriado nacional cambiar el color
-                            de alguno de los horarios con algo significativo del feriado -->
-                            <li>Lunes 08-19hs</span></li>
-                            <li>Martes 08-19hs</li>
-                            <li>Miercoles 08-19hs</li>
-                            <li>Jueves 08-19hs</li>
-                            <li>Viernes 08-19hs</li>
-                            <li>Sabado 08-19hs</li>
-                            <span>▲</span>
-                        </ul>
-                    </div>
+                    <div id="timetable" class="timetable"></div>
                 </div>
             </div>
         </main>
@@ -161,51 +148,6 @@
             </div>
         </section>
     </section>
-    <script>
-        // para saber a que hora cierra y abre
-        function Z(n) {
-            return (n < 10 ? '0' : '') + n;
-            }
-        function printTime() {
-            var d = new Date();
-            var hours = d.getHours();
-            var cl = 19 - hours;
-            var op = 8 - hours;
-            var op2 = 24 - hours + 8;
-            var mins = d.getMinutes();
-            if (mins === 0) {
-               var mc = 0;
-            }else {
-               var mc = 60 - mins;
-            }
-            var m = mc;
-            if (hours >= 8 && hours < 19 && mins != 0) {
-                document.getElementById("time").innerHTML =  "<p>" +"Cerramos en "+ "</p>" + Z(cl - 1)+":"+ Z(m) +" hs";
-                if (cl === 1) {
-                    document.getElementById("time").innerHTML =  "<p>" +"Cerramos en "+ "</p>" + Z(m) +" min";
-                }
-            }
-            else if (hours >= 8 && hours < 19 && mins === 0 ) {
-                    document.getElementById("time").innerHTML =  "<p>" +"Cerramos en "+ "</p>" + Z(cl) + " hs";
-                }
-            else if (hours >= 0 && hours < 8 && mins != 0) {
-                document.getElementById("time").innerHTML =  "<p>" +"Abrimos en "+ "</p>" + Z(op - 1) +":"+ Z(m) +" hs"
-                if (op === 1) {
-                    document.getElementById("time").innerHTML =  "<p>" +"Abrimos en "+ "</p>" + Z(m) +" min"
-                }
-            }
-            else if (hours >= 0 && hours < 8 && mins === 0) {
-                document.getElementById("time").innerHTML =  "<p>" +"Abrimos en "+ "</p>" + Z(op) + " hs"
-            }
-            else if (hours >= 19 && hours < 24 && mins === 0) {
-                document.getElementById("time").innerHTML =  "<p>" +"Abrimos en "+ "</p>" + Z(op2) + " hs";
-            }
-            else if (hours >= 19 && hours < 24 && mins != 0) {
-                document.getElementById("time").innerHTML = "<p>" + "Abrimos en " + "</p>" + Z(op2 - 1) +":"+ Z(m) +" hs";
-            } 
-        }
-        printTime()
-        setInterval(printTime, 30000);
-    </script>
+    <script src="scripts/time.js"></script>
 </body>
 </html>
