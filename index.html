@@ -16,62 +16,25 @@
 </head>
 <body>
     <div id = "fb-root" > </div> <script async diferir crossorigin = "anonymous" src = "https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v8.0" nonce = "0cx71Nkd" > </script> 
-    <head>
-        <div class="logo-mobile"><img src="img/logo2.png" alt=""></div>
-        <main style="z-index: 2;">
-            <div class="sector-logo">
-                <a href="index.html">
-                    <h1 title="Farmacia San Jose">
-                        <img class="logo" src="img/logo2.png" alt="">
-                    </h1>
-                </a>
-            </div>
-            <div class="menu">
-                <ul class="z-menu">
-                    <li><a href="page/novedades.html">Novedades</a></li>
-                    <li><a href="page/contact.html">Contactos</a></li>
-                    <li><a href="#">Nutri-info</a></li>
-                    <li><a href="#">Quienes somos</a></li>
-                </ul>
-            </div>
-
-            <div class="lateral-bar">
-                <dialog id="menu-mobile" >
-                    <ul class="menu-mobile">
-                        <li><a href="page/novedades.html">Novedades</a></li>
-                        <li><a href="page/contact.html">Contactos</a></li>
-                        <li><a href="#">Nutri-info</a></li>
-                        <li><a href="#">Quienes somos</a></li>
-                        <li><input type="button" value="X" onclick="document.getElementById('menu-mobile').removeAttribute('open')"></li>
-                        <li><a href="index.html"><img class="logo" src="img/logo2.png" alt=""></a></li>
-                    </ul>
-                </dialog>
-
-                <button value="Muestra diálogo" onclick="document.getElementById('menu-mobile').setAttribute('open', 'open')"> 
-                    <div class="menu-hamb">
-                        <div> </div>
-                        <div> </div>
-                        <div> </div>
-                    </div>
-                </button>
-                <nav class="share">
-                    <ul>
-                        <li class="ig"></li>
-                        <li><a class="contact fb" target="_parent" href="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u='+window.location.href,'','width=600,height=400,left=50,top=50,toolbar=yes');void 0"></a></li>
-                        <li><a class="contact tw" target="_parent" href="javascript:window.open('https://twitter.com/intent/tweet?text=&url='+window.location.href,'','width=600,height=400,left=50,top=50,toolbar=yes');void 0"></a></li>
-                        <li><a class="contact wp" target="_parent" href="javascript:window.open('https://api.whatsapp.com/send?text='+window.location.href,'','width=600,height=600,left=50,top=50,toolbar=yes');void 0"></a></li>
-                    </ul>
-                </nav>
-                <div class="box-hours">
-                    <div class="hours">
-                        <time id="time"></time>
-                        <span>▼</span>
-                    </div>
-                    <div id="timetable" class="timetable"></div>
-                </div>
-            </div>
-        </main>
-    </head>
+    <main id="headMenu">
+        <!-- <div class="logo-mobile"><img src="img/logo2.png" alt=""></div> -->
+    </main>
+    <script src="scripts/head.js"></script>
+    <nav class="share">
+        <ul>
+            <li class="ig"></li>
+            <li><a class="contact fb" target="_parent" href="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u='+window.location.href,'','width=600,height=400,left=50,top=50,toolbar=yes');void 0"></a></li>
+            <li><a class="contact tw" target="_parent" href="javascript:window.open('https://twitter.com/intent/tweet?text=&url='+window.location.href,'','width=600,height=400,left=50,top=50,toolbar=yes');void 0"></a></li>
+            <li><a class="contact wp" target="_parent" href="javascript:window.open('https://api.whatsapp.com/send?text='+window.location.href,'','width=600,height=600,left=50,top=50,toolbar=yes');void 0"></a></li>
+        </ul>
+    </nav>
+    <div class="box-hours">
+        <div class="hours">
+            <time id="time"></time>
+            <span>▼</span>
+        </div>
+        <div id="timetable" class="timetable"></div>
+    </div>
     <section class="first">
         <h2>Farmacia San Jose & Dietetica</h2>
         <aside>
@@ -80,7 +43,7 @@
     </section>
     <section class="start">
         <div class="start-content">
-            <a href="/page/novedades.html">
+            <a href="novedades.html">
                 <h3>Novedades</h3>
                 <ul>
                     <li>Nuevos productos.</li>
@@ -91,7 +54,7 @@
             </a>
         </div>
         <div class="start-content">
-            <a href="/page/contact.html">
+            <a href="contact.html">
                 <h3>Contactos</h3>
                 <ul>
                     <li>Formas de comunicarse con nosotros.</li>
@@ -123,8 +86,6 @@
     </section>
     <section class="generic">
         <div>
-<!--             <p>Nuestras</p>
-            <p>Redes</p> -->
             <img style="width: 3vw;" src="img/favicon3.png" alt="">
         </div>
         <section class="generic-first-division">    
