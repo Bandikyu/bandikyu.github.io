@@ -6,8 +6,7 @@ var clicElementGallery = document.getElementsByClassName('A2');
 for(var i=0;i<clicElementGallery.length;i++){
         clicElementGallery[i].addEventListener("click", function(){
             openDialog()
-            console.log(this.id)
-
+            //console.log(this.id)
 
             var x = this.id - 1;
             var gallery = [
