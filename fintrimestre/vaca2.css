@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.content {
+    user-select: none;
+    cursor: default;
+    position: absolute;
+    background-color: hsl(170, 47%, 70%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    height: 50px;
+    /* padding: 10px 20px; */
+    border-radius: 5px;
+}
+.vaca {
+    color: hsl(15, 74%, 46%);
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.barra {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .1;
+    background-color: rgb(48, 49, 53);
+    width: 0%;
+    height: 100%;
+    transition: 1s;
+}
+/* .content:hover p {
+    font-size: 1.5rem;
+    transition: 1s;
+} */
