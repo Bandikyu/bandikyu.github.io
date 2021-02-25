@@ -20,7 +20,7 @@ let porcentajeFaltante = diaActual/finalTrimestre*100;
 
 barra.style.width = `${porcentajeFaltante}%`;
 
-vaca.innerHTML = `Fin trimestre <p>en  ${finalTrimestre} dias.</p>`;
+vaca.innerHTML = `RECORDATORIO: falta ${finalTrimestre} dias para que termine el 1º trimestre`;
 
 content.addEventListener('mouseover', function() {
     barra.style.width = `0%`;
