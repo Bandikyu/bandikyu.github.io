@@ -7,14 +7,13 @@ body {
     width: 100vw;
 }
 .content {
-    color: hsl(3, 81%, 40%);
     font-weight: bold;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 1rem;
     user-select: none;
     cursor: default;
     position: absolute;
-    background-color: hsl(170, 47%, 70%);
+    background-color: hsl(300, 50%, 90%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,7 +23,7 @@ body {
     border-radius: 5px;
 }
 .vaca {
-    /* color: hsl(3, 81%, 40%); */
+    z-index: 1;
     text-align: center;
     opacity: 1;
     transition: .3s;
@@ -32,11 +31,11 @@ body {
 
 .content:hover .vaca {
     opacity: 0;
-    /* font-size: 0; */
     transition: .3s;
 }
 .content .dia {
-    font-size: 2rem;
+    z-index: 1;
+    font-size: 1.9rem;
     position: absolute;
     opacity: 0;
     transition: .3s;
@@ -48,12 +47,17 @@ body {
 }
 
 .barra {
+    border-radius: 5px;
     position: absolute;
     top: 0;
     left: 0;
-    opacity: .1;
-    background-color: rgb(48, 49, 53);
+    background-color: hsla(300, 50%, 30%,1);
     width: 0%;
     height: 100%;
     transition: 1s;
+}
+.barra p {
+    color: hsla(0, 0%, 50%,.5);
+    overflow: hidden;
+    font-size: .8rem;
 }
