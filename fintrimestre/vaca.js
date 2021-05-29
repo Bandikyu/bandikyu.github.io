@@ -6,15 +6,15 @@ let dia = document.getElementById('dia');
 let date = new Date();
 let deMiliADia = 1000*60*60*24;
 
-let diaFinal = 28;
-let mesFinal = 5;
+let diaFinal = 10;
+let mesFinal = 9;
 
 let finalTrimestre = Math.floor((new Date(date.getFullYear(),mesFinal-1,diaFinal+1) - date)/(deMiliADia));
 //cuando llegue a la fecha esto va a retornar un valor negativo, porque date es mayor que la fecha
 let finalTrimestre_100 = finalTrimestre/100;
 
-let diaComienzo = 9;
-let mesComienzo = 3;
+let diaComienzo = 31;
+let mesComienzo = 5;
 let diaActualTrimestre = Math.floor((date -  new Date(date.getFullYear(),mesComienzo-1,diaComienzo))/deMiliADia);
 let rangoDiasTrimestre = (((new Date(date.getFullYear(),mesFinal-1,diaFinal))-(new Date(date.getFullYear(),mesComienzo-1,diaComienzo)))/deMiliADia);
 let porcentajeRecorrido = 100/rangoDiasTrimestre*diaActualTrimestre;
