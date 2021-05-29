@@ -37,9 +37,9 @@ content.style.color = `hsl(${160+porcentajeRecorrido*2},20%,30%)`;
 barra.style.backgroundColor = `hsl(${160+porcentajeRecorrido*2},50%,80%)`;
 
 if(finalTrimestre>1) {
-    vaca.innerHTML = `RECORDATORIO: faltan <span>${finalTrimestre} dias</span> para que termine el 1º trimestre`;
+    vaca.innerHTML = `RECORDATORIO: faltan <span>${finalTrimestre} dias</span> para que termine el 2º trimestre`;
 }else if(finalTrimestre===1) {
-    vaca.innerHTML = `RECORDATORIO: falta <span>${finalTrimestre} dia</span> para que termine el 1º trimestre`;
+    vaca.innerHTML = `RECORDATORIO: falta <span>${finalTrimestre} dia</span> para que termine el 2º trimestre`;
 }else if (finalTrimestre===0) {vaca.textContent = 'ULTIMO DIA!!!';} else {vaca.textContent = 'Nuevo Trimestre 😎';}
 
 let emoticones = ['😎','😁','😀','😤','😊','😏','😑','😕','😟','😰','😨'];
