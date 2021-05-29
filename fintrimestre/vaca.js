@@ -40,7 +40,7 @@ if(finalTrimestre>1) {
     vaca.innerHTML = `RECORDATORIO: faltan <span>${finalTrimestre} dias</span> para que termine el 1º trimestre`;
 }else if(finalTrimestre===1) {
     vaca.innerHTML = `RECORDATORIO: falta <span>${finalTrimestre} dia</span> para que termine el 1º trimestre`;
-}else if (finalTrimestre===0) {vaca.textContent = 'ULTIMO DIA!!!';} else {vaca.textContent = 'Nuevo Trimestre';}
+}else if (finalTrimestre===0) {vaca.textContent = 'ULTIMO DIA!!!';} else {vaca.textContent = 'Nuevo Trimestre 😎';}
 
 let emoticones = ['😎','😁','😀','😤','😊','😏','😑','😕','😟','😰','😨'];
 let emoDistancia = Math.floor(100/emoticones.length);
