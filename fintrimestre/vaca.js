@@ -13,7 +13,7 @@ let finalTrimestre = Math.floor((new Date(date.getFullYear(),mesFinal-1,diaFinal
 //cuando llegue a la fecha esto va a retornar un valor negativo, porque date es mayor que la fecha
 let finalTrimestre_100 = finalTrimestre/100;
 
-let diaComienzo = 31;
+let diaComienzo = 30;
 let mesComienzo = 5;
 let diaActualTrimestre = Math.floor((date -  new Date(date.getFullYear(),mesComienzo-1,diaComienzo))/deMiliADia);
 let rangoDiasTrimestre = (((new Date(date.getFullYear(),mesFinal-1,diaFinal))-(new Date(date.getFullYear(),mesComienzo-1,diaComienzo)))/deMiliADia);
