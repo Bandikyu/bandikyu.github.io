@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    transition: .2s;
+}
+:root {
+    --color-boton: hsla(199, 100%, 22%, 1);
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-image: url(https://i.pinimg.com/originals/20/79/03/2079033abc8314be554f9d24f562a199.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content {
+    position: relative;
+    margin: 100px auto;
+    border-radius: 10px;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(3px);
+    background-color: rgba(0, 19, 80, 0.198);
+}
+
+.content div {
+    padding: 20px;
+}
+
+
+.content input {
+    background-color: var(--color-boton);
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(236, 236, 236);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.5rem;
+    white-space: initial;
+    border-radius: 5px;
+    border: none;
+}
+
+.content input:hover {
+    background-color: none;
+    position: relative;
+    bottom: 1px;
+    border: none;
+    box-shadow: 0px 0px 10px -4px rgb(195, 147, 124);
+}
+.content div:nth-child(2) input {
+    background-color: transparent;
+    border: 5px solid var(--color-boton);
+}
+.content div:nth-child(2) input:hover {
+    background-color: var(--color-boton);
+}
+
