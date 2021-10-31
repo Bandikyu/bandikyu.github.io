@@ -6,7 +6,7 @@ let dia = document.getElementById('dia');
 let date = new Date();
 let deMiliADia = 1000*60*60*24;
 
-let diaFinal = 17;
+let diaFinal = 3;
 let mesFinal = 12;
 
 let finalTrimestre = Math.floor((new Date(date.getFullYear(),mesFinal-1,diaFinal+1) - date)/(deMiliADia));
