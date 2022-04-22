@@ -8,20 +8,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section id="datos" class="datos">
-        <div id="generales" class="generales"></div>
-        <div id="gastos" class="gastos">
-            <div id="diarios" class="diarios"></div>
-            <div id="mes" class="mes"></div>
+    <section class="infoGral">
+
+        <div class="head">
+            <div id="reservas" class="reservas"></div>
+            <div id="daysFaltan" class="daysFaltan"></div>
         </div>
-        <input type="button" value="LLamar" name="llamar" id="llamada">
+
+        <div id="recomend" class="recomend"></div>
+        <div id="dispoDay" class="dispoDay"></div>
+        <div id="dispoMes" class="dispoMes"></div>
+
     </section>
     <section class="introGastos">
         <h2>Ingresa el gasto</h2>
         <input type="email" name="correo" id="new_correo">
         <input type="number" name="gasto" id="new_gasto">
-        <input id="btn_introGastos" type="button" value="Enviar">
+        <div class="ver">
+            <input id="btn_viewGastos" type="button" value="Ver Gastos">
+            <input id="btn_introGastos" type="button" value="Registrar">
+        </div>
     </section>
+    <dialog class="dialogGastos" id="dialogGastos" open>
+        <input id="btnCloseDialog" class="btnCloseDialog" type="button" value="x">
+        <div>
+            <div id="dayTotalGasto" class="recomend"></div>
+            <div id="dayDetalleGasto" class="recomend"></div>
+            <div id="mesTotalGasto" class="dispoDay"></div>
+            <div id="mesDetallegasto" class="dispoMes"></div>
+        </div>
+    </dialog>
     <script src="script.js"></script>
 </body>
 </html>

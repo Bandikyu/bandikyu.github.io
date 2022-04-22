@@ -1,42 +1,137 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing:content-box;
+    --color-etiquetas: hsl(139, 90%, 72%);
+    --border-radius: 10px;
 }
+
 body {
+    background-color: rgb(234, 234, 234);
     /* position: relative; */
     height: 100vh;
     /* border: 1px solid blue; */
     display: grid;
+    /* justify-content: center; */
+    align-items: center;
+    /* gap: 5px; */
+    grid-template-columns: 1;
     grid-template-rows: minmax(100px , 1fr);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
 }
 
+
+
+
+/* Info general */
+.infoGral {
+    /* border: 1px solid red; */
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* margin: 10px; */
+
+    
+}
+.infoGral> * {
+    /* border: 1px solid; */
+    border-radius: var(--border-radius);
+    padding: 20px 15px;
+    margin: 0 15px;
+    background-color: var(--color-etiquetas);
+}
+.infoGral>:nth-child(1) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.infoGral>:nth-child(1)>* {
+    /* border: 1px solid black; */
+    margin: 0 10%;
+}
+
+
+
+
+/* Ingreso de gastos */
 .introGastos {
-    /* padding: 50px; */
     height: 100%;
-    background-color: hsl(139, 90%, 72%);
-    width: 100%;
-    margin: 10px auto;
+    background-color: var(--color-etiquetas);
+    /* background-color: transparent; */
     display: flex;
     flex-direction: column;
     padding: 0 50px;
-    /* border: 2px solid; */
-/*     position: absolute;
-    bottom: 0; */
+    /* border: 1px solid; */
+
 }
 .introGastos :nth-child(1n) {
-    /* border: 1px solid red; */
-    /* height: 50px; */
     margin: 5px;
     text-align: center;
     justify-content: center;
     font-size: 1rem;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 100;
     padding: 15px;
+    border-radius: var(--border-radius);
+    border-color: transparent;
+}
+.introGastos :nth-child(1n):focus{
+    outline: none;
+    border: 2px solid rgb(112, 145, 145);
+    background-color: rgb(178, 224, 223);
+}
+.introGastos :nth-child(4) {
+    display: flex;
+    justify-content: space-between;
+
 }
 
-.datos {
-    border: 2px solid;
-    height: 20px;
+/* los gastos */
+.dialogGastos {
+    position: absolute;
+    border: none;
+    height: 100vh;
+    width: 100vw;
+    background-color: hsla(0, 0%, 0%, 0.682);
+}
+.dialogGastos>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    border: none;
+    height: 50vh;
+    width: 80vw;
+    margin: auto;
+    margin-top: 25vh;
+    background-color: transparent;
+    padding: 20px;
+}
+
+.dialogGastos>div * {
+    border: 1px solid;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: var(--border-radius);
+    background-color: rgb(100, 196, 164);
+}
+.dialogGastos>div *:nth-child(2n) {
+    background-color: rgb(226, 220, 220);
+}
+
+
+.btnCloseDialog {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 60px;
+    height: 60px;
+    background: rgb(149, 41, 41);
+    font-size: 2rem;
+    border: none;
 }
