@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing:content-box;
+    box-sizing:border-box;
     --color-etiquetas: hsl(139, 90%, 72%);
     --border-radius: 10px;
 }
@@ -20,6 +20,9 @@ body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 
 }
+
+
+
 
 
 
@@ -78,13 +81,11 @@ body {
 }
 .introGastos :nth-child(1n):focus{
     outline: none;
-    border: 2px solid rgb(112, 145, 145);
     background-color: rgb(178, 224, 223);
 }
 .introGastos :nth-child(4) {
     display: flex;
     justify-content: space-between;
-
 }
 
 /* los gastos */
@@ -96,32 +97,34 @@ body {
     background-color: hsla(0, 0%, 0%, 0.682);
 }
 .dialogGastos>div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    border: none;
-    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(1 , minmax(50px , 1fr));
+    gap: 5px;
+    align-items: center;
+    /* border: none; */
+    /* border: 5px solid black; */
+    height: 30vh;
     width: 80vw;
     margin: auto;
-    margin-top: 25vh;
+    margin-top: 45vh;
     background-color: transparent;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
-.dialogGastos>div * {
-    border: 1px solid;
-    height: 80px;
-    line-height: 80px;
+.dialogGastos>div>* {
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 90%; */
+    padding: 20px;
     text-align: center;
-    vertical-align: middle;
     border-radius: var(--border-radius);
     background-color: rgb(100, 196, 164);
 }
-.dialogGastos>div *:nth-child(2n) {
+.dialogGastos>div>div>input {
     background-color: rgb(226, 220, 220);
+    padding: 20px;
 }
 
 
@@ -133,5 +136,13 @@ body {
     height: 60px;
     background: rgb(149, 41, 41);
     font-size: 2rem;
+}
+
+
+
+
+/* botones */
+[class^="btn"] , [id^="btn"] {
     border: none;
+    border-radius: var(--border-radius);
 }

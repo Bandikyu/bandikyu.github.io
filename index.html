@@ -32,12 +32,26 @@
     <dialog class="dialogGastos" id="dialogGastos" open>
         <input id="btnCloseDialog" class="btnCloseDialog" type="button" value="x">
         <div>
-            <div id="dayTotalGasto" class="recomend"></div>
-            <div id="dayDetalleGasto" class="recomend"></div>
-            <div id="mesTotalGasto" class="dispoDay"></div>
-            <div id="mesDetallegasto" class="dispoMes"></div>
+            <div class="mes">
+                <div id="mesTotalGasto" class="dispoDay"></div>
+                <input type="button" value="Detalles" id="btnDetalleMes" class="btnDetalleMes">
+            </div>
+            <div class="dia">
+                <div id="dayTotalGasto" class="recomend"></div>
+                <input type="button" value="Detalles" id="btnDetalleDia" class="btnDetalleDia">
+            </div>
         </div>
     </dialog>
+    <section class="detallesGasto">
+        <ol id="mesDetallegasto" class="mesDetallegasto">
+            <li>buenas</li>
+            <li>buenas</li>
+            <li>buenas</li>
+            <li>buenas</li>
+            <li>buenas</li>
+        </ol>
+        <ul id="dayDetalleGasto" class="dayDetalleGasto"></ul>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>

@@ -25,20 +25,30 @@ let cl = console.log;
 const dialogGastos = document.getElementById("dialogGastos");
 const btn_viewGastos = document.getElementById("btn_viewGastos");
 const btnCloseDialog = document.getElementById("btnCloseDialog");
-const dayTotalGasto = document.getElementById("dayTotalGasto");
-const dayDetalleGasto = document.getElementById("dayDetalleGasto");
-const mesTotalGasto = document.getElementById("mesTotalGasto");
 const mesDetallegasto = document.getElementById("mesDetallegasto");
+const dayDetalleGasto = document.getElementById("dayDetalleGasto");
+const dayTotalGasto = document.getElementById("dayTotalGasto");
+const btnDetalleDia = document.getElementById("btnDetalleDia");
+const mesTotalGasto = document.getElementById("mesTotalGasto");
+const btnDetalleMes = document.getElementById("btnDetalleMes");
 
-btn_viewGastos.addEventListener("click" , ()=> dialogGastos.setAttribute("open",""));
+
+
+
+btn_viewGastos.addEventListener('click' , ()=> dialogGastos.setAttribute("open",""));
 btnCloseDialog.addEventListener("click" , ()=> dialogGastos.removeAttribute("open"));
+
 function loadDatos() {
   dayTotalGasto.textContent = `Gastos en el dia ${gastoPrueba.diario.total}`;
-  dayDetalleGasto.textContent = `Detalles`;
   mesTotalGasto.textContent = `Gastos en el mes ${gastoPrueba.mensual.total}`;
-  mesDetallegasto.textContent = `Detalles`;
+
+  //dayDetalleGasto.textContent = `Detalles`;
+  //mesDetallegasto.textContent = `Detalles`;
+
+  //gastoPrueba.mensual.detalle.forEach(e=> mesDetallegasto.appendChild(elementAndContent('p' , e)))
+  
 }
-loadDatos();
+//loadDatos();
 
 
 
@@ -101,6 +111,11 @@ function addGS(x) {
         body: JSON.stringify(x) // body data type must match "Content-Type" header
       })
 }
+
+//UTILIDADES
+//crea un elemento HTML y su contenido segun los argumentos
+
+  let tag = document.createElement("p");
 
 
 
