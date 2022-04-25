@@ -5,6 +5,9 @@
     --color-etiquetas: hsl(139, 90%, 72%);
     --border-radius: 10px;
 }
+li {
+    list-style: none;
+}
 
 body {
     background-color: rgb(234, 234, 234);
@@ -18,7 +21,6 @@ body {
     grid-template-columns: 1;
     grid-template-rows: minmax(100px , 1fr);
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-
 }
 
 
@@ -138,7 +140,43 @@ body {
     font-size: 2rem;
 }
 
+/* detalle gastos */
+.detallesGasto {
+    overflow:auto;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    /* border: 1px solid black; */
+    background-color: hsl(112, 75%, 76%);
+    /* width: 50vw; */
 
+}
+.detallesGasto::-webkit-scrollbar {
+    display: none;
+}
+/* RESOLVER #Lista Detalles Gasto son estilos a analizar para el problema*/
+.detallesGasto>* {
+    text-align: center;
+    font-size: 1.2em;
+    display: none;
+    /* margin-left: -50vw; */
+
+}
+/* estos ya son estilos nomas */
+.detallesGasto>*>*{
+    font-size: 1rem;
+    margin-bottom: 5px;
+    /* font-size: 1.1rem; */
+    padding: 2px 0;
+    min-width: 30vw;
+    width: 50vw;
+}
+.detallesGasto>*>*:nth-child(2n+1) {
+    background-color: hsl(112, 75%, 85%);
+}
+.detallesGasto>*>li:first-child {
+    border: 1px solid red;
+}
 
 
 /* botones */
