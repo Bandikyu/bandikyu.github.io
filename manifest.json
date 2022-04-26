@@ -1,0 +1,38 @@
+{
+    "name": "Gastos",
+    "short_name": "Gastos",
+    "start_url": "./?utm_source=web_app_manifest",
+    "display": "standalone",
+    "icons": [
+      {
+        "src": "img/gastos16.png",
+        "sizes": "16x16",
+        "type": "image/png"
+      },
+      {
+        "src": "img/gastos24.png",
+        "sizes": "24x24",
+        "type": "image/png"
+      },
+      {
+        "src": "img/gastos32.png",
+        "sizes": "32x32",
+        "type": "image/png"
+      },
+      {
+        "src": "img/gastos64.png",
+        "sizes": "64x64",
+        "type": "image/png"
+      },
+      {
+        "src": "img/gastos128.png",
+        "sizes": "128x128",
+        "type": "image/png"
+      },
+      {
+        "src": "img/gastos256.png",
+        "sizes": "256x256",
+        "type": "image/png"
+      }
+    ]
+  }
