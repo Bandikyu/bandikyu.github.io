@@ -51,10 +51,14 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    /* border: 1px solid red; */
 }
 .infoGral>:nth-child(1)>* {
     /* border: 1px solid black; */
-    margin: 0 10%;
+    margin: 0 5%;
+    /* width: 30%; */
+    /* border: 1px solid red; */
+
 }
 
 
@@ -133,7 +137,7 @@ body {
 .btnCloseDialog {
     position: absolute;
     bottom: 10px;
-    right: 10px;
+    left: 10px;
     width: 60px;
     height: 60px;
     background: rgb(149, 41, 41);
@@ -142,11 +146,11 @@ body {
 
 /* detalle gastos */
 .detallesGasto {
-    overflow:auto;
+    overflow:scroll;
     height: 100vh;
     position: absolute;
     left: 0;
-    /* border: 1px solid black; */
+    /* border: 1px solid red; */
     background-color: hsl(112, 75%, 76%);
     /* width: 50vw; */
 
@@ -158,6 +162,9 @@ body {
 .detallesGasto>* {
     text-align: center;
     font-size: 1.2em;
+    position: relative;
+    width: 50vw;
+    /* bottom: 0; */
     display: none;
     /* margin-left: -50vw; */
 
@@ -170,12 +177,10 @@ body {
     padding: 2px 0;
     min-width: 30vw;
     width: 50vw;
+
 }
 .detallesGasto>*>*:nth-child(2n+1) {
     background-color: hsl(112, 75%, 85%);
-}
-.detallesGasto>*>li:first-child {
-    border: 1px solid red;
 }
 
 

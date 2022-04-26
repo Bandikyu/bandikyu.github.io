@@ -7,13 +7,14 @@ let gasto;
 
 recursosPag
      .then(resp => resp.json())
-     .then(json => gasto = json );
-     //.then(loadDatos);
+     .then(json => gasto = json )
+     .then(loadDatos)
+     .then(usarDatos);
 
 
-let gastoPrueba = {
+/* let gasto = {
   mensual:{
-    total:19680.0, 
+    total:25757, 
     detalle:[
     [3600 ,	'2022-04-01T03:00:00.000Z'],
     [0 ,	'2022-04-02T03:00:00.000Z'],
@@ -51,11 +52,14 @@ let gastoPrueba = {
     total:0.0, 
     detalle:[[0.0]]
   }
-}
+} */
 
 //gastos
-function depurando() {
-  gastoPrueba.mensual.detalle.forEach(e=>console.log(`${e[0]} ${e[1].slice(0,10)}`));
+/* function depurando() {
+  gasto.mensual.detalle.forEach(e=>console.log(`${e[0]} ${e[1].slice(0,10)}`));
+} */
+function filtando() {
+  gasto.mensual.detalle.filter(e=>e)
 }
 
 let cl = console.log;
@@ -79,32 +83,33 @@ btn_viewGastos.addEventListener('click' , ()=> dialogGastos.setAttribute('open',
 btnCloseDialog.addEventListener('click' , ()=> dialogGastos.removeAttribute('open'));
 
 function loadDatos() {
-  dayTotalGasto.textContent = `Gastos en el dia ${gastoPrueba.diario.total}`;
-  mesTotalGasto.textContent = `Gastos en el mes ${gastoPrueba.mensual.total}`;
+  dayTotalGasto.textContent = `Gastos en el dia ${gasto.diario.total}`;
+  mesTotalGasto.textContent = `Gastos en el mes ${gasto.mensual.total}`;
 
   //detalles
-  gastoPrueba.mensual.detalle.forEach(e=>insertNewElement("li",`${e[0]} ${e[1].slice(0,10)}`,mesDetallegasto));
-  gastoPrueba.diario.detalle.forEach(e=>insertNewElement("li",e,dayDetalleGasto));
+  gasto.mensual.detalle.forEach(e=>insertNewElement("li",`${e[0]} ${e[1].slice(0,10)}`,mesDetallegasto));
+  gasto.diario.detalle.forEach(e=>insertNewElement("li",e,dayDetalleGasto));
 
   
 }
-loadDatos();
 
 
-  
 
 /*RESOLVER #Lista Detalles Gasto: 
 tengo que buscar una manera optima de que el efecto de movimiento al usar move() se de
 falla porque se ejecutan al "mismo tiempo" entonces no se muestra el efecto de transicion*/
-btnDetalleDia.addEventListener('click', ()=>{changeDisplay(dayDetalleGasto,"block","none");(move(dayDetalleGasto))});
+/* btnDetalleDia.addEventListener('click', ()=>{changeDisplay(dayDetalleGasto,"block","none");(move(dayDetalleGasto))});
 
-btnDetalleMes.addEventListener('click', ()=>{changeDisplay(mesDetallegasto  ,"block","none");(move(mesDetallegasto))});
+btnDetalleMes.addEventListener('click', ()=>{changeDisplay(mesDetallegasto  ,"block","none");(move(mesDetallegasto))}); */
+btnDetalleDia.addEventListener('click', ()=>{changeDisplay(dayDetalleGasto,"block","none")});
+
+btnDetalleMes.addEventListener('click', ()=>{changeDisplay(mesDetallegasto  ,"block","none")});
 
 
 
 //info general
-const diasFaltantes = new Date(new Date().getFullYear(), new Date().getMonth() + 1, 0)
-.getDate() - new Date().getDate();
+
+
 const reservas = document.getElementById("reservas");
 const daysFaltan = document.getElementById("daysFaltan");
 const recomend = document.getElementById("recomend");
@@ -113,28 +118,35 @@ const dispoMes = document.getElementById("dispoMes");
 
 
 function usarDatos() {
-  reservas.textContent = `Reservas `
-  daysFaltan.textContent = `Faltan ${diasFaltantes} dias`
-  recomend.textContent = `Recomendado gastar hasta: `
-  dispoDay.textContent = `Disponible total para el dia: `
-  dispoMes.textContent = `Disponible total para el mes: `
+  const saldoDiario = 1000;
+  const diasDelMes = new Date(new Date().getFullYear(), new Date().getMonth() + 1, 0)
+  .getDate(); 
+  const saldoMensual = saldoDiario*diasDelMes;
+  const reser = (saldoDiario*new Date().getDate())-gasto.mensual.total;
+  const diasFaltantes = diasDelMes - new Date().getDate();
+
+
+  reservas.textContent = `Reservas ${reser}`;
+  daysFaltan.textContent = `Faltan ${diasFaltantes} dias`;
+  recomend.textContent = `Gasto recomendado por dia: $${(saldoMensual-gasto.mensual.total)/diasFaltantes}`;
+  dispoDay.textContent = `Disponible total para el dia: $${saldoDiario}`;
+  dispoMes.textContent = `Disponible total para el mes: $${saldoMensual-gasto.mensual.total}`;
 }
-usarDatos();
 
 
 
 
 
 
-//CARGAR DATOS
+
+//SUBIR DATOS
 const newCorreo = document.getElementById("new_correo");
 const newGasto = document.getElementById("new_gasto");
 const btnName = document.getElementById("btn_introGastos");
 let fecha = `${new Date().getDate()}/${new Date().getMonth()+1}/${new Date().getFullYear()} ${new Date().getHours()+1}:${new Date().getMinutes()}`
 
-// btnName.addEventListener("click" , ()=> arrPersonas.push(new person(newName.value)));
 btnName.addEventListener("click" , ()=> addGS(`${fecha},${newGasto.value},${newCorreo.value}`));
-//newName.addEventListener('keypress' , (e) => {e.key === 'Enter' ? arrPersonas.push(new person(newName.value)):"mal"});
+
 
 
 function addGS(x) {
@@ -153,6 +165,10 @@ function addGS(x) {
         body: JSON.stringify(x) // body data type must match "Content-Type" header
       })
 }
+
+
+
+
 
 //UTILIDADES
 //crea un elemento HTML y su contenido en un nodo padre segun los argumentos
