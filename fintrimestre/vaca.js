@@ -15,11 +15,11 @@ let dia = document.getElementById('dia');
 let ifram = window.frameElement;
 if(ifram){
     ifram.style.border = '1px solid red';
-    let ifrmIniDia = Number(ifram.attributes.dInicio.value);
-    let ifrmIniMes = Number(ifram.attributes.mInicio.value);
-    let ifrmEndDia = Number(ifram.attributes.dFinal.value);
-    let ifrmEndMes = Number(ifram.attributes.mFinal.value);
-    let numTri = Number(ifram.attributes.numTri.value);
+    let ifrmIniDia = Number(ifram.attributes.dinicio.value);
+    let ifrmIniMes = Number(ifram.attributes.minicio.value);
+    let ifrmEndDia = Number(ifram.attributes.dfinal.value);
+    let ifrmEndMes = Number(ifram.attributes.mfinal.value);
+    let numTri = Number(ifram.attributes.numtri.value);
     vacaciones(ifrmIniDia , ifrmIniMes , ifrmEndDia , ifrmEndMes , numTri)
     //vaca.textContent = ifrmIniDia + " " + ifrmEndDia;
 } else vacaciones(1 , 3 , 1 , 7);
