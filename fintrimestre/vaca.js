@@ -7,14 +7,13 @@ let dia = document.getElementById('dia');
 //filtro si hay un Iframe cambia los valores de las variables
 //Plantilla de Ejemplo:
 /*
-    <iframe dInicio="1" mInicio="3" dFinal="1" mFinal="8" numTri="2" id="iFrame" 
+    <iframe dinicio="1" minicio="3" dfinal="1" mfinal="8" numtri="2" id="iFrame" 
     src="http://192.168.1.103:5500/fintrimestre/vaca.html" frameborder="0" 
     style="width: 85%; height: 40px; display: block; margin: auto;"></iframe> 
 */
 
 let ifram = window.frameElement;
 if(ifram){
-    ifram.style.border = '1px solid red';
     let ifrmIniDia = Number(ifram.attributes.dinicio.value);
     let ifrmIniMes = Number(ifram.attributes.minicio.value);
     let ifrmEndDia = Number(ifram.attributes.dfinal.value);
@@ -22,7 +21,7 @@ if(ifram){
     let numTri = Number(ifram.attributes.numtri.value);
     vacaciones(ifrmIniDia , ifrmIniMes , ifrmEndDia , ifrmEndMes , numTri)
     //vaca.textContent = ifrmIniDia + " " + ifrmEndDia;
-} else vacaciones(1 , 3 , 1 , 7);
+} else vacaciones(23 , 5 , 25 , 8 , 2);
 
 
 function vacaciones(dIni , mIni , dFin , mFin , tri) {
