@@ -21,7 +21,7 @@ if(ifram){
     let numTri = Number(ifram.attributes.numtri.value);
     vacaciones(ifrmIniDia , ifrmIniMes , ifrmEndDia , ifrmEndMes , numTri)
     //vaca.textContent = ifrmIniDia + " " + ifrmEndDia;
-} else vacaciones(23 , 5 , 25 , 8 , 2);
+} else vacaciones(26 , 8 , 2 , 12 , 3);
 
 
 function vacaciones(dIni , mIni , dFin , mFin , tri) {
