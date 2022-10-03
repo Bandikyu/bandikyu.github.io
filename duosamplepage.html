@@ -10,42 +10,63 @@
             background-color: #235390;
             background-image: url(./img/noc.svg);
             font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            box-sizing: content-box;
         }
         .content {
             display: flex;
             flex-direction: column;
-            margin: 200px;
+            height: 98vh;
             gap: 10px;
             align-items: center;
             justify-content: center;
         }
-        .content a {
+        .content a , label , input , noscript {
             width: 200px;
             padding: 10px 20px;
             text-align: center;
-            background-color: hsl(208, 100%, 85%);
+            background-color: hsla(208, 100%, 85%,.7);
             border-radius: 5px;
             color: black;
             border: 0;
             text-decoration: none;
             transition: background-color .2s;
         }
-        .content a:hover {
-            background-color: hsl(208, 100%, 97%);
+        noscript {
+            position: absolute;
+            top:16%;
+            width: 300px;
+            transform: rotate(30deg);
+            background-color: rgba(255, 189, 179, 0.9);
         }
-        .mundo {
-            width: 360px;
-            height: 360px;
-            background-image: url(https://bandikyu.github.io/testingSVG/duo/duoAnimateWorld.min.svg);
+        .content a:hover , input:focus {
+            outline: none;
+            background-color: hsla(208, 100%, 97%,.9);
         }
     </style>
 </head>
 <body>
     <div class="content">
-        <div class="mundo"></div>
+        <div style="display: contents">
+            <noscript>To edit the values it is necessary to have JavaScript enabled</noscript>
+            <label for="inputSpeedW">World speed in seconds</label>
+            <input type="number" name="inputSpeedW" id="inputSpeedW">
+            <label for="inputSpeedS">Sky speed in seconds</label>
+            <input type="number" name="inputSpeedS" id="inputSpeedS">
+        </div>
+        <svg  width="360" height="360" xmlns="http://www.w3.org/2000/svg"><path d="M180.19 360.642c99.411 0 180-80.589 180-180s-80.589-180-180-180-180 80.589-180 180 80.589 180 180 180z" fill="#24d4de" fill-opacity=".04"/><path d="M180.19 331.54c83.404 0 151.016-67.612 151.016-151.016S263.594 29.508 180.19 29.508 29.174 97.12 29.174 180.524 96.786 331.54 180.19 331.54z" fill="#24d4de" fill-opacity=".06"/><g mask="url(#prefix__a)" fill="#49c0f8"><g id="prefix__b"><path d="M.719.346h358.943v360.355H.719z"/><rect width="110.905" height="82.676" x="-146.967" y="-288.73" ry="41.338" rx="40.506" transform="scale(-1)" fill="#58a700"/><path fill-rule="evenodd" clip-rule="evenodd" d="M268.264 157.515c22.81 0 41.3 18.492 41.3 41.302a41.114 41.114 0 01-4.912 19.554l9.339 1.794c2.07.397 2.705.662 6.01 1.723 3.304 1.06 18.115 9.584 18.052 25.601-.063 16.017-9.048 25.16-18.874 26.191-9.826 1.032-6.15.662-31.224.99l-19.516-.002c-19.177 0-34.75-15.428-34.985-34.55h-3.247c-22.811 0-41.302-18.491-41.302-41.301 0-22.81 18.49-41.302 41.302-41.302zM82.704 62.023c-22.81 0-41.3 18.492-41.3 41.303a41.114 41.114 0 004.912 19.554l-9.339 1.794c-2.07.397-2.705.662-6.01 1.723-3.304 1.06-18.114 9.584-18.052 25.6.063 16.018 9.048 25.16 18.874 26.192 9.826 1.031 6.15.662 31.224.99l19.516-.002c19.177 0 34.75-15.428 34.985-34.55h3.247c22.811 0 41.302-18.491 41.302-41.301 0-22.81-18.49-41.303-41.302-41.303zm165.684 2.851c7.208-4.747 59.342-15.227 86.05 4.552 10.72 7.94 16.145 34.256 3.399 47.774-10.153 10.767-32.543 11.319-43.02 12.123l-22.725.002c-3.255 10.562-13.093 18.238-24.724 18.238H234.39c-14.287 0-25.87-11.581-25.87-25.868 0-13.738 10.71-24.976 24.238-25.818a34.255 34.255 0 01-.034-1.541c0-7.343 4.018-19.27 10.814-25.36z" fill="#58a700"/><g transform="translate(-357.7)"><path d="M.719.346h358.943v360.355H.719z"/><rect width="110.905" height="82.676" x="-146.967" y="-288.73" ry="41.338" rx="40.506" transform="scale(-1)" fill="#58a700"/><path fill-rule="evenodd" clip-rule="evenodd" d="M268.264 157.515c22.81 0 41.3 18.492 41.3 41.302a41.114 41.114 0 01-4.912 19.554l9.339 1.794c2.07.397 2.705.662 6.01 1.723 3.304 1.06 18.115 9.584 18.052 25.601-.063 16.017-9.048 25.16-18.874 26.191-9.826 1.032-6.15.662-31.224.99l-19.516-.002c-19.177 0-34.75-15.428-34.985-34.55h-3.247c-22.811 0-41.302-18.491-41.302-41.301 0-22.81 18.49-41.302 41.302-41.302zM82.704 62.023c-22.81 0-41.3 18.492-41.3 41.303a41.114 41.114 0 004.912 19.554l-9.339 1.794c-2.07.397-2.705.662-6.01 1.723-3.304 1.06-18.114 9.584-18.052 25.6.063 16.018 9.048 25.16 18.874 26.192 9.826 1.031 6.15.662 31.224.99l19.516-.002c19.177 0 34.75-15.428 34.985-34.55h3.247c22.811 0 41.302-18.491 41.302-41.301 0-22.81-18.49-41.303-41.302-41.303zm165.684 2.851c7.208-4.747 59.342-15.227 86.05 4.552 10.72 7.94 16.145 34.256 3.399 47.774-10.153 10.767-32.543 11.319-43.02 12.123l-22.725.002c-3.255 10.562-13.093 18.238-24.724 18.238H234.39c-14.287 0-25.87-11.581-25.87-25.868 0-13.738 10.71-24.976 24.238-25.818a34.255 34.255 0 01-.034-1.541c0-7.343 4.018-19.27 10.814-25.36z" fill="#58a700"/></g></g><g id="prefix__c" fill="#bbf3f6"><path d="M184.774 74.549h-19.993c-9.25 0-16.749 7.499-16.749 16.749s7.499 16.748 16.749 16.748h19.993c9.25 0 16.749-7.499 16.749-16.748 0-9.25-7.499-16.749-16.749-16.749zm86.201 173.487h-50.692c-9.25 0-16.75 7.499-16.75 16.749s7.5 16.748 16.75 16.748h50.692c9.25 0 16.749-7.499 16.749-16.748 0-9.25-7.5-16.749-16.75-16.749z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M54.982 114.084c2.308-11.243 11.816-12.633 26.266-12.464l4.152.046 11.329.002c9.25 0 16.749 7.499 16.749 16.748 0 2.267-.451 4.43-1.267 6.402h5.388c9.25 0 16.749 7.498 16.749 16.748s-7.5 16.75-16.75 16.75H97.607c-9.25 0-16.749-7.5-16.749-16.75 0-2.267.45-4.429 1.267-6.402 0 0-12.783.78-20.923-.96-7.723-3.211-7.08-15.923-6.219-20.12z"/><path d="M184.774 74.549h-19.993c-9.25 0-16.749 7.499-16.749 16.749s7.499 16.748 16.749 16.748h19.993c9.25 0 16.749-7.499 16.749-16.748 0-9.25-7.499-16.749-16.749-16.749zm86.201 173.487h-50.692c-9.25 0-16.75 7.499-16.75 16.749s7.5 16.748 16.75 16.748h50.692c9.25 0 16.749-7.499 16.749-16.748 0-9.25-7.5-16.749-16.75-16.749z" transform="translate(-357.7)"/><path fill-rule="evenodd" clip-rule="evenodd" d="M54.982 114.084c2.308-11.243 11.816-12.633 26.266-12.464l4.152.046 11.329.002c9.25 0 16.749 7.499 16.749 16.748 0 2.267-.451 4.43-1.267 6.402h5.388c9.25 0 16.749 7.498 16.749 16.748s-7.5 16.75-16.75 16.75H97.607c-9.25 0-16.749-7.5-16.749-16.75 0-2.267.45-4.429 1.267-6.402 0 0-12.783.78-20.923-.96-7.723-3.211-7.08-15.923-6.219-20.12z" transform="translate(-357.7)"/></g><animateTransform href="#prefix__b" type="translate" repeatCount="indefinite" dur="60s" from="0" to="357.7" attributeName="transform" begin="0s"/><animateTransform href="#prefix__c" type="translate" repeatCount="indefinite" dur="70s" from="0" to="357.7" attributeName="transform" begin="0s"/></g><mask id="prefix__a"><path d="M305.786 180.524A125.596 125.596 0 01180.571 306.12 125.596 125.596 0 0154.597 181.286a125.596 125.596 0 01124.45-126.353A125.596 125.596 0 01305.778 179" fill="#ffff" stroke="#010101" stroke-width="1.002" stroke-linecap="round" stroke-linejoin="bevel" stroke-opacity=".2"/></mask></svg>
         <a target="_blank" href="https://github.com/Bandikyu/testingSVG/tree/main/duo">Repository</a>
         <a target="_blank" href="https://github.com/Bandikyu/testingSVG/tree/main/duo/duoAnimateWorld.svg">File</a>
         <a target="_blank" href="https://github.com/Bandikyu/testingSVG/tree/main/duo/duoAnimateWorld.min.svg">Minified File</a>
     </div>
+    <script>
+        let world = document.querySelector('[href="#prefix__b"]');
+        let sky = document.querySelector('[href="#prefix__c"]');
+        let inputSpeedW = document.querySelector('#inputSpeedW');
+        let inputSpeedS = document.querySelector('#inputSpeedS');
+        inputSpeedW.value = Number(world.getAttribute("dur").substring(0 , world.getAttribute("dur").length-1));
+        inputSpeedS.value = Number(sky.getAttribute("dur").substring(0 , world.getAttribute("dur").length-1));
+        inputSpeedW.addEventListener("change" , ()=> world.setAttribute("dur" , inputSpeedW.value + "s"));
+        inputSpeedS.addEventListener("change" , ()=> sky.setAttribute("dur" , inputSpeedS.value + "s"));
+    </script>
 </body>
 </html>
