@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Page</title>
+    <style>
+        body {
+            background-color: #235390;
+            background-image: url(./img/noc.svg);
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            margin: 200px;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+        }
+        .content a {
+            width: 200px;
+            padding: 10px 20px;
+            text-align: center;
+            background-color: hsl(208, 100%, 85%);
+            border-radius: 5px;
+            color: black;
+            border: 0;
+            text-decoration: none;
+            transition: background-color .2s;
+        }
+        .content a:hover {
+            background-color: hsl(208, 100%, 97%);
+        }
+        .mundo {
+            width: 360px;
+            height: 360px;
+            background-image: url(https://bandikyu.github.io/testingSVG/duo/duoAnimateWorld.min.svg);
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="mundo"></div>
+        <a target="_blank" href="https://github.com/Bandikyu/testingSVG/tree/main/duo">Repository</a>
+        <a target="_blank" href="https://github.com/Bandikyu/testingSVG/tree/main/duo/duoAnimateWorld.svg">File</a>
+        <a target="_blank" href="https://github.com/Bandikyu/testingSVG/tree/main/duo/duoAnimateWorld.min.svg">Minified File</a>
+    </div>
+</body>
+</html>
