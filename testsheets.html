@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/img/gastos16.png" type="image/x-icon">
+</head>
+<body>
+    <section class="infoGral">
+
+        <div class="head">
+            <div id="reservas" class="reservas"></div>
+            <div id="daysFaltan" class="daysFaltan"></div>
+        </div>
+
+        <div id="recomend" class="recomend"></div>
+        <div id="dispoDay" class="dispoDay"></div>
+        <div id="dispoMes" class="dispoMes"></div>
+
+    </section>
+    <section class="introGastos">
+        <h2>Ingresa el gasto</h2>
+        <input type="email" name="correo" id="new_correo">
+        <input type="number" name="gasto" id="new_gasto">
+        <div class="ver">
+            <input id="btn_viewGastos" type="button" value="Ver Gastos">
+            <input id="btn_introGastos" type="button" value="Registrar">
+        </div>
+    </section>
+    <dialog class="dialogGastos" id="dialogGastos">
+        <input id="btnCloseDialog" class="btnCloseDialog" type="button" value="x">
+        <div>
+            <div class="mes">
+                <div id="mesTotalGasto" class="dispoDay"></div>
+                <input type="button" value="Detalles" id="btnDetalleMes" class="btnDetalleMes">
+            </div>
+            <div class="dia">
+                <div id="dayTotalGasto" class="recomend"></div>
+                <input type="button" value="Detalles" id="btnDetalleDia" class="btnDetalleDia">
+            </div>
+        </div>
+    </dialog>
+    <section id="detallesGasto" class="detallesGasto">
+        <ul id="mesDetallegasto" class="mesDetallegasto">Mes</ul>
+        <ul id="dayDetalleGasto" class="dayDetalleGasto">Dia</ul>
+    </section>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="datos.js"></script>
+</body>
+</html>
