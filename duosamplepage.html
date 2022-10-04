@@ -64,7 +64,7 @@
         let inputSpeedW = document.querySelector('#inputSpeedW');
         let inputSpeedS = document.querySelector('#inputSpeedS');
         inputSpeedW.value = Number(world.getAttribute("dur").substring(0 , world.getAttribute("dur").length-1));
-        inputSpeedS.value = Number(sky.getAttribute("dur").substring(0 , world.getAttribute("dur").length-1));
+        inputSpeedS.value = Number(sky.getAttribute("dur").substring(0 , sky.getAttribute("dur").length-1));
         inputSpeedW.addEventListener("change" , ()=> world.setAttribute("dur" , inputSpeedW.value + "s"));
         inputSpeedS.addEventListener("change" , ()=> sky.setAttribute("dur" , inputSpeedS.value + "s"));
     </script>
